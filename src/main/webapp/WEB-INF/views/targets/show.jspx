@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_saic_tmr_domain_Target" object="${target}" path="/targets" z="BxANmRuyLZP98qIgQG0FVpTr2rE=">
+        <field:display field="targetNumber" id="s_com_saic_tmr_domain_Target_targetNumber" object="${target}" z="V4ryV1dzdHMnzR2BuzyUIjnCc+g="/>
+        <field:display field="pursuitStatus" id="s_com_saic_tmr_domain_Target_pursuitStatus" object="${target}" z="c6PXpgd2TwDkaoK/Y0vHYLD4COM="/>
+        <field:display field="tracCrmNumber" id="s_com_saic_tmr_domain_Target_tracCrmNumber" object="${target}" z="JunQ2Xb1kJMhlDIvR/iik4At+8s="/>
+        <field:display field="opCenter" id="s_com_saic_tmr_domain_Target_opCenter" object="${target}" z="8im9kUKHE0frPAZKfLoFg8IogSo="/>
+        <field:display field="command" id="s_com_saic_tmr_domain_Target_command" object="${target}" z="+cM5bn8gXu2mzyhNc4+ZP0gQTmU="/>
+        <field:display field="contractEffort" id="s_com_saic_tmr_domain_Target_contractEffort" object="${target}" z="uZ/61E5r8xHxzzutxeKkKBozt+4="/>
+        <field:display field="rfpNumber" id="s_com_saic_tmr_domain_Target_rfpNumber" object="${target}" z="rieXMXrHOCSszevvbjNXpqrQJok="/>
+        <field:display field="codeName" id="s_com_saic_tmr_domain_Target_codeName" object="${target}" z="NopLRQBc/9p7FcGqwfe1bY/guHc="/>
+        <field:display field="captureManager" id="s_com_saic_tmr_domain_Target_captureManager" object="${target}" z="I2TAVsLlOeW7sWwRa8zOf9KyeDI="/>
+        <field:display field="pursuitRole" id="s_com_saic_tmr_domain_Target_pursuitRole" object="${target}" z="Kc6qUEAP62/xHtfh5jrX9/CEoJM="/>
+        <field:display field="primeCompany" id="s_com_saic_tmr_domain_Target_primeCompany" object="${target}" z="7FwX6GAJn7ZWliOgUV2HeL6J96M="/>
+        <field:display field="procurementValue" id="s_com_saic_tmr_domain_Target_procurementValue" object="${target}" z="DcfGgVP1rb2A6LZbWQqjU2DIUtg="/>
+        <field:display field="buValue" id="s_com_saic_tmr_domain_Target_buValue" object="${target}" z="LfkQzAuYSMPe+5HwG/hNXkkj42k="/>
+        <field:display field="procurementType" id="s_com_saic_tmr_domain_Target_procurementType" object="${target}" z="AQ9f0Yyr6w4YTO2/THbKA510Zds="/>
+        <field:display field="newBusiness" id="s_com_saic_tmr_domain_Target_newBusiness" object="${target}" z="v2/HB4ki1P40ZXAAeaqvwrknXZ4="/>
+        <field:display date="true" dateTimePattern="${target_rfpdate_date_format}" field="rfpDate" id="s_com_saic_tmr_domain_Target_rfpDate" object="${target}" z="ixiURAxf/UmDs4WY4u+lFFGsTq4="/>
+        <field:display date="true" dateTimePattern="${target_submittaldate_date_format}" field="submittalDate" id="s_com_saic_tmr_domain_Target_submittalDate" object="${target}" z="8vSyl6cRAG2TltG5v4xqRG5aMuI="/>
+        <field:display date="true" dateTimePattern="${target_awarddate_date_format}" field="awardDate" id="s_com_saic_tmr_domain_Target_awardDate" object="${target}" z="BOmkRKECHPZhVibNbZXUbNtpYyE="/>
+        <field:display field="incumbant" id="s_com_saic_tmr_domain_Target_incumbant" object="${target}" z="n4mRpDMHNYfAmdRAmyRzwwY/jN4="/>
+        <field:display field="comments" id="s_com_saic_tmr_domain_Target_comments" object="${target}" z="TGPGxsnRpW5FyTTtN0jFW/DsT2g="/>
+        <field:display field="winningCompany" id="s_com_saic_tmr_domain_Target_winningCompany" object="${target}" z="bi7GjgPi1qegv9WDL7dEjATGEzI="/>
+        <field:display field="winningBid" id="s_com_saic_tmr_domain_Target_winningBid" object="${target}" z="+ROuvvMLFmCxsRK49ABL+j7V0ms="/>
+    </page:show>
+</div>

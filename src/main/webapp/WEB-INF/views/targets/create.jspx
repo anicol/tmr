@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_saic_tmr_domain_Target" modelAttribute="target" path="/targets" render="${empty dependencies}" z="obEdvHuiVVRDzcJsLjxSPBdn6/U=">
+        <field:input field="targetNumber" id="c_com_saic_tmr_domain_Target_targetNumber" z="9tvvDvTJB6cZuKgzj6KCK37PKE8="/>
+        <field:select field="pursuitStatus" id="c_com_saic_tmr_domain_Target_pursuitStatus" itemValue="id" items="${pursuitstatuses}" path="/pursuitstatuses" z="nJMipaM9lwcSXgnGu8zQJlWurPA="/>
+        <field:input field="tracCrmNumber" id="c_com_saic_tmr_domain_Target_tracCrmNumber" z="emycWKOsam2yAjRNeeNl4vz9zYU="/>
+        <field:select field="opCenter" id="c_com_saic_tmr_domain_Target_opCenter" itemValue="id" items="${opcenters}" path="/opcenters" z="siuyQj5goXO22Nt+yrnjL5ml/7Y="/>
+        <field:select field="command" id="c_com_saic_tmr_domain_Target_command" itemValue="id" items="${commands}" path="/commands" z="yTIjf25yiA/jzsazoN60VWNSZQc="/>
+        <field:input field="contractEffort" id="c_com_saic_tmr_domain_Target_contractEffort" min="2" required="true" z="Zg2Xqne1hUceUZyvsSc1cIYnau8="/>
+        <field:input field="rfpNumber" id="c_com_saic_tmr_domain_Target_rfpNumber" required="true" z="BvaKYlheruUDQ9y0QU+D5R98pVQ="/>
+        <field:input field="codeName" id="c_com_saic_tmr_domain_Target_codeName" z="6uSsAjM9Qcd1vVE7+MoKkESv620="/>
+        <field:select field="captureManager" id="c_com_saic_tmr_domain_Target_captureManager" itemValue="id" items="${people}" path="/people" z="Dpyph5gu/g7gbauikNkYf+lEasU="/>
+        <field:select field="pursuitRole" id="c_com_saic_tmr_domain_Target_pursuitRole" itemValue="id" items="${pursuitroles}" path="/pursuitroles" z="bpd5XbhwPtrwb7OaHDAqvnUFSYA="/>
+        <field:select field="primeCompany" id="c_com_saic_tmr_domain_Target_primeCompany" itemValue="id" items="${companys}" path="/companys" z="KpgfqCBiz/+Mw92OTbY/kFqSAiY="/>
+        <field:input field="procurementValue" id="c_com_saic_tmr_domain_Target_procurementValue" validationMessageCode="field_invalid_number" z="97CDSFtb3Irt4jk9dVo6CNZu5ew="/>
+        <field:input field="buValue" id="c_com_saic_tmr_domain_Target_buValue" validationMessageCode="field_invalid_number" z="oIyhj0CnDgs5umUpCpJSBHfSsTg="/>
+        <field:select field="procurementType" id="c_com_saic_tmr_domain_Target_procurementType" itemValue="id" items="${procurementtypes}" path="/procurementtypes" z="IhGCLo5W96dmVNvUy6uuEbNvhks="/>
+        <field:select field="newBusiness" id="c_com_saic_tmr_domain_Target_newBusiness" itemValue="id" items="${newbusinesses}" path="/newbusinesses" z="UOaq/Gocoh+6gJ7TjmCU8+ezlN4="/>
+        <field:datetime dateTimePattern="${target_rfpdate_date_format}" field="rfpDate" id="c_com_saic_tmr_domain_Target_rfpDate" z="3Z+f3ZbRUN5c4Qv91jHF3W1pXs0="/>
+        <field:datetime dateTimePattern="${target_submittaldate_date_format}" field="submittalDate" id="c_com_saic_tmr_domain_Target_submittalDate" z="gJOgubn+f7CCW2wRacGyaKX9P6k="/>
+        <field:datetime dateTimePattern="${target_awarddate_date_format}" field="awardDate" id="c_com_saic_tmr_domain_Target_awardDate" z="kIyN3OTzz+8AYi7CCI23xTlQ1NY="/>
+        <field:select field="incumbant" id="c_com_saic_tmr_domain_Target_incumbant" itemValue="id" items="${companys}" path="/companys" z="YQ2dL538IZ83tSrLdaeLmbT3iRU="/>
+        <field:input field="comments" id="c_com_saic_tmr_domain_Target_comments" z="cqSEFaIXMdO5F1Nt/Omnnhh8+qs="/>
+        <field:select field="winningCompany" id="c_com_saic_tmr_domain_Target_winningCompany" itemValue="id" items="${companys}" path="/companys" z="RFfFx2VDW6S8BKxWwKewtJbCVIU="/>
+        <field:input field="winningBid" id="c_com_saic_tmr_domain_Target_winningBid" validationMessageCode="field_invalid_number" z="do/B42Zhjn16KO+Fn/n9m7JbZjU="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_saic_tmr_domain_Target" render="${not empty dependencies}" z="39sBV/D7WQJgcGn7BCKeiczf2hw="/>
+</div>

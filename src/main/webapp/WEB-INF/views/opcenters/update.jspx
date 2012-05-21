@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_saic_tmr_domain_OpCenter" modelAttribute="opCenter" path="/opcenters" versionField="Version" z="PuvW157ZoEI/mooBg5C4gk0zGx0=">
+        <field:select field="businessUnit" id="c_com_saic_tmr_domain_OpCenter_businessUnit" itemValue="id" items="${businessunits}" path="/businessunits" z="jx1lnBqVApmOM+gxNFuRMN4zwQk="/>
+        <field:input field="code" id="c_com_saic_tmr_domain_OpCenter_code" min="1" required="true" z="FYIpymoB6zO9fDuyQZna1bES7P0="/>
+        <field:input field="name" id="c_com_saic_tmr_domain_OpCenter_name" min="2" required="true" z="o0aXivN8/Ly1tEdHRuDqb1zfoVY="/>
+    </form:update>
+</div>

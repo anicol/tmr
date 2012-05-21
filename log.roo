@@ -1,0 +1,81 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-04 09:07:36
+project --topLevelPackage com.saic.tmr
+hint
+jpa setup --provider HIBERNATE --database MYSQL 
+database properties list
+database properties set --key database.username --value tmr
+database properties set --key database.password --value Seap0rt_srv@5
+hint
+entity jpa --class ~.domain.ProcurementType --testAutomatically 
+field string --fieldName code --notNull --sizeMin 1
+field string --fieldName name --notNull --sizeMin 2
+entity jpa --class ~.domain.ProcurementStatus --testAutomatically 
+field string --fieldName code --notNull --sizeMin 1
+field string --fieldName name --notNull --sizeMin 2
+entity jpa --class ~.domain.PursuitRole --testAutomatically 
+field string --fieldName code --notNull --sizeMin 1
+field string --fieldName name --notNull --sizeMin 2
+entity jpa --class ~.domain.NewBusiness --testAutomatically 
+field string --fieldName code --notNull --sizeMin 1
+field string --fieldName name --notNull --sizeMin 2
+entity jpa --class ~.domain.Person --testAutomatically 
+field string --fieldName firstName --notNull --sizeMin 2
+field string --fieldName lastName --notNull --sizeMin 2
+field string --fieldName email --notNull --sizeMin 2
+field string --fieldName phone --sizeMin 2
+// [failed] field string --fieldName email --sizeMin 2
+perform eclipse
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-07 14:08:13
+perform eclipse
+entity jpa --class ~.domain.BusinessUnit --testAutomatically 
+field string --fieldName code --notNull --sizeMin 1
+field string --fieldName name --notNull --sizeMin 2
+entity jpa --class ~.domain.OpCenter --testAutomatically 
+field string --fieldName code --notNull --sizeMin 1
+field string --fieldName name --notNull --sizeMin 2
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-07 14:16:38
+entity jpa --class ~.domain.OpCenter
+entity jpa --class ~.domain.OpCenter --testAutomatically 
+field reference --fieldName businessUnit --type ~.domain.BusinessUnit
+field string --fieldName code --notNull --sizeMin 1
+field string --fieldName name --notNull --sizeMin 2
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-07 14:52:42
+entity jpa --class ~.domain.Command --testAutomatically 
+field string --fieldName name --notNull --sizeMin 2
+entity jpa --class ~.domain.Target --testAutomatically 
+field number --fieldName targetNumber --type java.lang.int
+field reference --fieldName pursuitStatus --type ~.domain.PursuitStatus
+field number --fieldName tracCrmNumber --type int
+field reference --fieldName opCenter --type ~.domain.OpCenter
+field reference --fieldName command --type ~.domain.Command
+field string --fieldName contractEffort --notNull --sizeMin 2
+field string --fieldName rfpNumber --notNull
+field string --fieldName codeName
+field reference --fieldName captureManager --type ~.domain.Person
+field reference --fieldName pursuitRole --type ~.domain.PursuitRole
+field reference --fieldName primeCompany --type ~.domain.Command
+field number --fieldName procurementValue --type java.lang.Float
+field number --fieldName buValue --type java.lang.Float
+field reference --fieldName procurementType --type ~.domain.ProcurementType
+field reference --fieldName newBusiness --type ~.domain.NewBusiness
+field date --fieldName rfpDate --type java.util.Date
+field date --fieldName submittalDate --type java.util.Date
+field date --fieldName awardDate --type java.util.Date
+field reference --fieldName incumbant --type ~.domain.Command
+field string --fieldName comments
+field reference --fieldName winningCompany --type ~.domain.Command
+field number --fieldName winningBid --type java.lang.Float
+entity jpa --class ~.domain.Company
+entity jpa --class ~.domain.Company --testAutomatically 
+field string --fieldName name --notNull --sizeMin 2
+test integration
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-07 15:19:56
+perform tests
+perform tests
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-18 15:00:23
+perform tests
+perform tests
+perform eclipse
+web mvc setup
+web mv all --package ~.web
+perform tests

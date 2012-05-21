@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_saic_tmr_domain_Person" modelAttribute="person" path="/people" versionField="Version" z="g3RGy6v1ZOfsTP+vxcad2E/2pBQ=">
+        <field:input field="firstName" id="c_com_saic_tmr_domain_Person_firstName" min="2" required="true" z="mEzj7lJfvSop7xCQpFppyzxPL1Q="/>
+        <field:input field="lastName" id="c_com_saic_tmr_domain_Person_lastName" min="2" required="true" z="Rw/JPQVhS8V6sb4+6RrG8hcYFYA="/>
+        <field:input field="email" id="c_com_saic_tmr_domain_Person_email" min="2" required="true" validationMessageCode="field_invalid_email" z="/f4rHrQiZ7ETOF+VWWDj/S4gRhQ="/>
+        <field:input field="phone" id="c_com_saic_tmr_domain_Person_phone" min="2" required="true" z="1ZAm5vfJ+ABqBIvWX2ajVMMS7ho="/>
+    </form:update>
+</div>

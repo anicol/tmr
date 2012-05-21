@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_saic_tmr_domain_PursuitStatus" object="${pursuitstatus}" path="/pursuitstatuses" z="sPVjASEn3BIjV3l0wLIMijp98kg=">
+        <field:display field="code" id="s_com_saic_tmr_domain_PursuitStatus_code" object="${pursuitstatus}" z="zI2HXST/CGRiucVDSK79dca2+Ac="/>
+        <field:display field="name" id="s_com_saic_tmr_domain_PursuitStatus_name" object="${pursuitstatus}" z="8tdONiJLq/vZiwiqw4VWcEaSX84="/>
+    </page:show>
+</div>
