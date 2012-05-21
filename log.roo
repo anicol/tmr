@@ -79,3 +79,9 @@ perform eclipse
 web mvc setup
 web mv all --package ~.web
 perform tests
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-20 18:54:18
+security setup
+perform eclipse
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-21 08:02:03
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-21 08:03:15
