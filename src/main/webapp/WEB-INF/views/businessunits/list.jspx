@@ -4,7 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_saic_tmr_domain_BusinessUnit" items="${businessunits}" z="rLcCZiJ2u7NnkYX8iwtI/8cYzZk=">
         <table:table data="${businessunits}" id="l_com_saic_tmr_domain_BusinessUnit" path="/businessunits" z="/ryk6mzx/r8kGXYiZvo1NbUoFUE=">
-            <table:column id="c_com_saic_tmr_domain_BusinessUnit_code" property="code" z="0zqVr8K4UUR/egxsy6gnsuPZ3Ts="/>
             <table:column id="c_com_saic_tmr_domain_BusinessUnit_name" property="name" z="YxRABvcKP6i2o8u/k/fS+J1mtV8="/>
         </table:table>
     </page:list>

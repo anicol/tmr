@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_saic_tmr_domain_PursuitRole" modelAttribute="pursuitRole" path="/pursuitroles" versionField="Version" z="S42L77Wz9MSCdkCv8ux6kn6kv88=">
-        <field:input field="code" id="c_com_saic_tmr_domain_PursuitRole_code" min="1" required="true" z="w/y260i6T08t2zuJuN0EofVfT4I="/>
         <field:input field="name" id="c_com_saic_tmr_domain_PursuitRole_name" min="2" required="true" z="tr9qBuwLZhLeFNceWw7DoGgSbwE="/>
     </form:update>
 </div>

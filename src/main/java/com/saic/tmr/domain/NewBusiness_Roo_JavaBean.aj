@@ -7,14 +7,6 @@ import com.saic.tmr.domain.NewBusiness;
 
 privileged aspect NewBusiness_Roo_JavaBean {
     
-    public String NewBusiness.getCode() {
-        return this.code;
-    }
-    
-    public void NewBusiness.setCode(String code) {
-        this.code = code;
-    }
-    
     public String NewBusiness.getName() {
         return this.name;
     }

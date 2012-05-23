@@ -24,14 +24,8 @@ privileged aspect NewBusinessDataOnDemand_Roo_DataOnDemand {
     
     public NewBusiness NewBusinessDataOnDemand.getNewTransientNewBusiness(int index) {
         NewBusiness obj = new NewBusiness();
-        setCode(obj, index);
         setName(obj, index);
         return obj;
-    }
-    
-    public void NewBusinessDataOnDemand.setCode(NewBusiness obj, int index) {
-        String code = "code_" + index;
-        obj.setCode(code);
     }
     
     public void NewBusinessDataOnDemand.setName(NewBusiness obj, int index) {

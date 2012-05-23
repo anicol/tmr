@@ -25,7 +25,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<BusinessUnit, String> ApplicationConversionServiceFactoryBean.getBusinessUnitToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.BusinessUnit, java.lang.String>() {
             public String convert(BusinessUnit businessUnit) {
-                return new StringBuilder().append(businessUnit.getCode()).append(" ").append(businessUnit.getName()).toString();
+                return new StringBuilder().append(businessUnit.getName()).toString();
             }
         };
     }
@@ -97,7 +97,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<NewBusiness, String> ApplicationConversionServiceFactoryBean.getNewBusinessToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.NewBusiness, java.lang.String>() {
             public String convert(NewBusiness newBusiness) {
-                return new StringBuilder().append(newBusiness.getCode()).append(" ").append(newBusiness.getName()).toString();
+                return new StringBuilder().append(newBusiness.getName()).toString();
             }
         };
     }
@@ -193,7 +193,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<PursuitRole, String> ApplicationConversionServiceFactoryBean.getPursuitRoleToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.PursuitRole, java.lang.String>() {
             public String convert(PursuitRole pursuitRole) {
-                return new StringBuilder().append(pursuitRole.getCode()).append(" ").append(pursuitRole.getName()).toString();
+                return new StringBuilder().append(pursuitRole.getName()).toString();
             }
         };
     }

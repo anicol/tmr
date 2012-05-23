@@ -24,14 +24,8 @@ privileged aspect BusinessUnitDataOnDemand_Roo_DataOnDemand {
     
     public BusinessUnit BusinessUnitDataOnDemand.getNewTransientBusinessUnit(int index) {
         BusinessUnit obj = new BusinessUnit();
-        setCode(obj, index);
         setName(obj, index);
         return obj;
-    }
-    
-    public void BusinessUnitDataOnDemand.setCode(BusinessUnit obj, int index) {
-        String code = "code_" + index;
-        obj.setCode(code);
     }
     
     public void BusinessUnitDataOnDemand.setName(BusinessUnit obj, int index) {

@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_saic_tmr_domain_PursuitRole" modelAttribute="pursuitRole" path="/pursuitroles" render="${empty dependencies}" z="iXhFZ9wBxOfGIdvwrHXrKFrmSlw=">
-        <field:input field="code" id="c_com_saic_tmr_domain_PursuitRole_code" min="1" required="true" z="w/y260i6T08t2zuJuN0EofVfT4I="/>
         <field:input field="name" id="c_com_saic_tmr_domain_PursuitRole_name" min="2" required="true" z="tr9qBuwLZhLeFNceWw7DoGgSbwE="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_saic_tmr_domain_PursuitRole" render="${not empty dependencies}" z="3IWy//DEFIgg1pG6K1tvv2x9vMk="/>

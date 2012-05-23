@@ -14,7 +14,7 @@ public class PursuitStatus {
     @NotNull
     @Size(min = 1)
     private String code;
-
+	
     @NotNull
     @Size(min = 2)
     private String name;

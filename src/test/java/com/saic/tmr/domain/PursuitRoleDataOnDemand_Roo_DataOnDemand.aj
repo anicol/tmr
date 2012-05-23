@@ -24,14 +24,8 @@ privileged aspect PursuitRoleDataOnDemand_Roo_DataOnDemand {
     
     public PursuitRole PursuitRoleDataOnDemand.getNewTransientPursuitRole(int index) {
         PursuitRole obj = new PursuitRole();
-        setCode(obj, index);
         setName(obj, index);
         return obj;
-    }
-    
-    public void PursuitRoleDataOnDemand.setCode(PursuitRole obj, int index) {
-        String code = "code_" + index;
-        obj.setCode(code);
     }
     
     public void PursuitRoleDataOnDemand.setName(PursuitRole obj, int index) {
