@@ -78,7 +78,6 @@ privileged aspect TargetDataOnDemand_Roo_DataOnDemand {
         setIncumbant(obj, index);
         setNewBusiness(obj, index);
         setOpCenter(obj, index);
-        setPrimeCompany(obj, index);
         setProcurementType(obj, index);
         setProcurementValue(obj, index);
         setPursuitRole(obj, index);
@@ -143,11 +142,6 @@ privileged aspect TargetDataOnDemand_Roo_DataOnDemand {
         obj.setOpCenter(opCenter);
     }
     
-    public void TargetDataOnDemand.setPrimeCompany(Target obj, int index) {
-        Company primeCompany = companyDataOnDemand.getRandomCompany();
-        obj.setPrimeCompany(primeCompany);
-    }
-    
     public void TargetDataOnDemand.setProcurementType(Target obj, int index) {
         ProcurementType procurementType = procurementTypeDataOnDemand.getRandomProcurementType();
         obj.setProcurementType(procurementType);
@@ -189,7 +183,7 @@ privileged aspect TargetDataOnDemand_Roo_DataOnDemand {
     }
     
     public void TargetDataOnDemand.setTracCrmNumber(Target obj, int index) {
-        int tracCrmNumber = index;
+        String tracCrmNumber = "tracCrmNumber_" + index;
         obj.setTracCrmNumber(tracCrmNumber);
     }
     

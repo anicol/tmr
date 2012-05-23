@@ -3,9 +3,9 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_saic_tmr_domain_Person" modelAttribute="person" path="/people" versionField="Version" z="g3RGy6v1ZOfsTP+vxcad2E/2pBQ=">
-        <field:input field="firstName" id="c_com_saic_tmr_domain_Person_firstName" min="2" required="true" z="mEzj7lJfvSop7xCQpFppyzxPL1Q="/>
-        <field:input field="lastName" id="c_com_saic_tmr_domain_Person_lastName" min="2" required="true" z="Rw/JPQVhS8V6sb4+6RrG8hcYFYA="/>
-        <field:input field="email" id="c_com_saic_tmr_domain_Person_email" min="2" required="true" validationMessageCode="field_invalid_email" z="/f4rHrQiZ7ETOF+VWWDj/S4gRhQ="/>
-        <field:input field="phone" id="c_com_saic_tmr_domain_Person_phone" min="2" required="true" z="1ZAm5vfJ+ABqBIvWX2ajVMMS7ho="/>
+        <field:input field="firstName" id="c_com_saic_tmr_domain_Person_firstName" z="JH4cZ15Ah0K0rH4DxKKDuVKOYzo="/>
+        <field:input field="lastName" id="c_com_saic_tmr_domain_Person_lastName" z="e8pyyzsZgSjYuz0WykXQnLDLnFw="/>
+        <field:input field="email" id="c_com_saic_tmr_domain_Person_email" validationMessageCode="field_invalid_email" z="CUEZKYv8PXeVL5Ay4GrOmhodOXs="/>
+        <field:input field="phone" id="c_com_saic_tmr_domain_Person_phone" z="TrCQHO2AWNrksg46fjwEeiMw1d8="/>
     </form:update>
 </div>

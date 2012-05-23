@@ -13,7 +13,6 @@
         <field:display field="codeName" id="s_com_saic_tmr_domain_Target_codeName" object="${target}" z="NopLRQBc/9p7FcGqwfe1bY/guHc="/>
         <field:display field="captureManager" id="s_com_saic_tmr_domain_Target_captureManager" object="${target}" z="I2TAVsLlOeW7sWwRa8zOf9KyeDI="/>
         <field:display field="pursuitRole" id="s_com_saic_tmr_domain_Target_pursuitRole" object="${target}" z="Kc6qUEAP62/xHtfh5jrX9/CEoJM="/>
-        <field:display field="primeCompany" id="s_com_saic_tmr_domain_Target_primeCompany" object="${target}" z="7FwX6GAJn7ZWliOgUV2HeL6J96M="/>
         <field:display field="procurementValue" id="s_com_saic_tmr_domain_Target_procurementValue" object="${target}" z="DcfGgVP1rb2A6LZbWQqjU2DIUtg="/>
         <field:display field="buValue" id="s_com_saic_tmr_domain_Target_buValue" object="${target}" z="LfkQzAuYSMPe+5HwG/hNXkkj42k="/>
         <field:display field="procurementType" id="s_com_saic_tmr_domain_Target_procurementType" object="${target}" z="AQ9f0Yyr6w4YTO2/THbKA510Zds="/>
@@ -25,5 +24,6 @@
         <field:display field="comments" id="s_com_saic_tmr_domain_Target_comments" object="${target}" z="TGPGxsnRpW5FyTTtN0jFW/DsT2g="/>
         <field:display field="winningCompany" id="s_com_saic_tmr_domain_Target_winningCompany" object="${target}" z="bi7GjgPi1qegv9WDL7dEjATGEzI="/>
         <field:display field="winningBid" id="s_com_saic_tmr_domain_Target_winningBid" object="${target}" z="+ROuvvMLFmCxsRK49ABL+j7V0ms="/>
+        <field:display field="primeCompany" id="s_com_saic_tmr_domain_Target_primeCompany" object="${target}" z="7FwX6GAJn7ZWliOgUV2HeL6J96M="/>
     </page:show>
 </div>

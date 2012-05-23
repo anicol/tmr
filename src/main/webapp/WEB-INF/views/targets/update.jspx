@@ -9,11 +9,10 @@
         <field:select field="opCenter" id="c_com_saic_tmr_domain_Target_opCenter" itemValue="id" items="${opcenters}" path="/opcenters" z="siuyQj5goXO22Nt+yrnjL5ml/7Y="/>
         <field:select field="command" id="c_com_saic_tmr_domain_Target_command" itemValue="id" items="${commands}" path="/commands" z="yTIjf25yiA/jzsazoN60VWNSZQc="/>
         <field:input field="contractEffort" id="c_com_saic_tmr_domain_Target_contractEffort" min="2" required="true" z="Zg2Xqne1hUceUZyvsSc1cIYnau8="/>
-        <field:input field="rfpNumber" id="c_com_saic_tmr_domain_Target_rfpNumber" required="true" z="BvaKYlheruUDQ9y0QU+D5R98pVQ="/>
+        <field:input field="rfpNumber" id="c_com_saic_tmr_domain_Target_rfpNumber" z="Ute9HiZgk5s0ILsOHcZ5s2QguWI="/>
         <field:input field="codeName" id="c_com_saic_tmr_domain_Target_codeName" z="6uSsAjM9Qcd1vVE7+MoKkESv620="/>
         <field:select field="captureManager" id="c_com_saic_tmr_domain_Target_captureManager" itemValue="id" items="${people}" path="/people" z="Dpyph5gu/g7gbauikNkYf+lEasU="/>
         <field:select field="pursuitRole" id="c_com_saic_tmr_domain_Target_pursuitRole" itemValue="id" items="${pursuitroles}" path="/pursuitroles" z="bpd5XbhwPtrwb7OaHDAqvnUFSYA="/>
-        <field:select field="primeCompany" id="c_com_saic_tmr_domain_Target_primeCompany" itemValue="id" items="${companys}" path="/companys" z="KpgfqCBiz/+Mw92OTbY/kFqSAiY="/>
         <field:input field="procurementValue" id="c_com_saic_tmr_domain_Target_procurementValue" validationMessageCode="field_invalid_number" z="97CDSFtb3Irt4jk9dVo6CNZu5ew="/>
         <field:input field="buValue" id="c_com_saic_tmr_domain_Target_buValue" validationMessageCode="field_invalid_number" z="oIyhj0CnDgs5umUpCpJSBHfSsTg="/>
         <field:select field="procurementType" id="c_com_saic_tmr_domain_Target_procurementType" itemValue="id" items="${procurementtypes}" path="/procurementtypes" z="IhGCLo5W96dmVNvUy6uuEbNvhks="/>
@@ -25,5 +24,6 @@
         <field:input field="comments" id="c_com_saic_tmr_domain_Target_comments" z="cqSEFaIXMdO5F1Nt/Omnnhh8+qs="/>
         <field:select field="winningCompany" id="c_com_saic_tmr_domain_Target_winningCompany" itemValue="id" items="${companys}" path="/companys" z="RFfFx2VDW6S8BKxWwKewtJbCVIU="/>
         <field:input field="winningBid" id="c_com_saic_tmr_domain_Target_winningBid" validationMessageCode="field_invalid_number" z="do/B42Zhjn16KO+Fn/n9m7JbZjU="/>
+        <field:select field="primeCompany" id="c_com_saic_tmr_domain_Target_primeCompany" itemValue="id" items="${companys}" multiple="true" path="/companys" z="BP88rhbAJ4GGpKDeRRBJeoHjAps="/>
     </form:update>
 </div>

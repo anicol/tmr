@@ -13,6 +13,7 @@ import com.saic.tmr.domain.PursuitRole;
 import com.saic.tmr.domain.PursuitStatus;
 import com.saic.tmr.domain.Target;
 import java.util.Date;
+import java.util.Set;
 
 privileged aspect Target_Roo_JavaBean {
     
@@ -32,11 +33,11 @@ privileged aspect Target_Roo_JavaBean {
         this.pursuitStatus = pursuitStatus;
     }
     
-    public int Target.getTracCrmNumber() {
+    public String Target.getTracCrmNumber() {
         return this.tracCrmNumber;
     }
     
-    public void Target.setTracCrmNumber(int tracCrmNumber) {
+    public void Target.setTracCrmNumber(String tracCrmNumber) {
         this.tracCrmNumber = tracCrmNumber;
     }
     
@@ -96,11 +97,11 @@ privileged aspect Target_Roo_JavaBean {
         this.pursuitRole = pursuitRole;
     }
     
-    public Company Target.getPrimeCompany() {
+    public Set<Company> Target.getPrimeCompany() {
         return this.primeCompany;
     }
     
-    public void Target.setPrimeCompany(Company primeCompany) {
+    public void Target.setPrimeCompany(Set<Company> primeCompany) {
         this.primeCompany = primeCompany;
     }
     

@@ -1,6 +1,5 @@
 package com.saic.tmr.domain;
 
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -11,17 +10,11 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJpaActiveRecord
 public class Person {
 
-    @NotNull
-    @Size(min = 2)
     private String firstName;
 
-    @NotNull
-    @Size(min = 2)
     private String lastName;
 
-    @Size(min = 2)
     private String email;
 
-    @Size(min = 2)
     private String phone;
 }

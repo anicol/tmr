@@ -85,3 +85,12 @@ perform eclipse
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-21 08:02:03
 exit
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-21 08:03:15
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-21 09:12:12
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-21 10:37:46
+perform package
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-22 13:30:17
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-22 13:54:42
+perform tests
+perform tests
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-22 14:27:14
