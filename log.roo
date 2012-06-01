@@ -96,3 +96,50 @@ perform tests
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-22 14:27:14
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-23 12:30:44
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-23 12:31:34
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-30 10:50:04
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-30 10:53:13
+osgi update --bundleSymbolicName ca.digitalface.jasperoo
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-30 10:53:53
+finder list --class ~.domain.Target
+finder add --finderName findTargetsByRfpDate
+finder add --finderName findTargetsByRfpDateBetween
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-30 11:08:00
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-30 11:19:32
+osgi uninstall --bundleSymbolicName ca.digitalface.jasperoo
+addon remove --bundleSymbolicName ca.digitalface.jasperoo
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-30 11:20:09
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-30 13:08:24
+finder add --class ~.domain.Target --finderName findByRfpDateBetween
+finder add --class ~.domain.Target --finderName findTargetsByRfpDateBetween
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-30 13:10:23
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-30 13:12:08
+perform eclipse
+perform tests
+logging setup --package WEB --level DEBUG
+web mvc all --package ~.web
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-31 11:18:14
+controller class --class ~.web.ImportDataController
+entity jpa --class ~.web.File
+perform eclipse
+field string content --notNull 
+field string name --notNull 
+// [failed] controller scaffold ~.web.FileController
+// [failed] web mvc scaffold ~.web.FileController
+// [failed] web mvc scaffold ~.web.FileUploadController
+perform eclipse
+web mvc all --package ~.web
+entity jpa --class ~.domain.Document
+field string --fieldName name --notNull --sizeMax 30
+field string --fieldName description --sizeMax 500
+field string --fieldName filename --notNull 
+field string --fieldName contentType --notNull
+// [failed] field number --fieldName size --type int
+field number --fieldName filesize --type int
+// [failed] field number --fieldName filesize --type Long
+// [failed] web mvc all --package ~.web
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-01 06:32:54
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-01 06:37:53
+web mvc all --package  ~.web
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-01 07:11:45
+perform eclipse

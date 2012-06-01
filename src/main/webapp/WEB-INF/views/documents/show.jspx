@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_saic_tmr_domain_Document" object="${document}" path="/documents" update="false" z="smqLC3KhdiXV8R+3blQDIulWMT4=">
+        <field:display field="name" id="s_com_saic_tmr_domain_Document_name" object="${document}" z="sRicb40p9G5XykndmeqQMEnrLYs="/>
+        <field:display field="description" id="s_com_saic_tmr_domain_Document_description" object="${document}" z="34cp4hQkPakv6OmU94PwMuwlA/g="/>
+        <field:display field="filename" id="s_com_saic_tmr_domain_Document_filename" object="${document}" z="h1bQhNdU9QhJzJjkkDdxtkJFzjc="/>
+        <field:display field="content" id="s_com_saic_tmr_domain_Document_content" object="${document}" z="DOoAqOzfaSQ5jvLSuTESqx/M8wE="/>
+        <field:display field="contentType" id="s_com_saic_tmr_domain_Document_contentType" object="${document}" z="VI/eIiP+Em5QKJqm8LGo6RS5+Dw="/>
+        <field:display field="url" id="s_com_saic_tmr_domain_Document_url" object="${document}" z="SwQEP/4INK4EIu0W6o9HoItIH7w="/>
+        <field:display field="filesize" id="s_com_saic_tmr_domain_Document_filesize" object="${document}" z="6ZxHBmY2Ih79K1FIYYXaqJmLevw="/>
+    </page:show>
+</div>

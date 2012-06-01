@@ -6,6 +6,7 @@ package com.saic.tmr.web;
 import com.saic.tmr.domain.BusinessUnit;
 import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.Company;
+import com.saic.tmr.domain.Document;
 import com.saic.tmr.domain.NewBusiness;
 import com.saic.tmr.domain.OpCenter;
 import com.saic.tmr.domain.Person;
@@ -90,6 +91,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.saic.tmr.domain.Company>() {
             public com.saic.tmr.domain.Company convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Company.class);
+            }
+        };
+    }
+    
+    public Converter<Document, String> ApplicationConversionServiceFactoryBean.getDocumentToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.Document, java.lang.String>() {
+            public String convert(Document document) {
+                return new StringBuilder().append(document.getName()).append(" ").append(document.getDescription()).append(" ").append(document.getFilename()).append(" ").append(document.getContentType()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Document> ApplicationConversionServiceFactoryBean.getIdToDocumentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.saic.tmr.domain.Document>() {
+            public com.saic.tmr.domain.Document convert(java.lang.Long id) {
+                return Document.findDocument(id);
+            }
+        };
+    }
+    
+    public Converter<String, Document> ApplicationConversionServiceFactoryBean.getStringToDocumentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.saic.tmr.domain.Document>() {
+            public com.saic.tmr.domain.Document convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Document.class);
             }
         };
     }
@@ -272,6 +297,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getCompanyToStringConverter());
         registry.addConverter(getIdToCompanyConverter());
         registry.addConverter(getStringToCompanyConverter());
+        registry.addConverter(getDocumentToStringConverter());
+        registry.addConverter(getIdToDocumentConverter());
+        registry.addConverter(getStringToDocumentConverter());
         registry.addConverter(getNewBusinessToStringConverter());
         registry.addConverter(getIdToNewBusinessConverter());
         registry.addConverter(getStringToNewBusinessConverter());

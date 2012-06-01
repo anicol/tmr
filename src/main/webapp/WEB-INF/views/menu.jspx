@@ -43,5 +43,17 @@
             <menu:item id="i_person_new" messageCode="global_menu_new" url="/people?form" z="IlD8NFD64X8egaRrgHbQeWKT68I="/>
             <menu:item id="i_person_list" messageCode="global_menu_list" url="/people?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MFjeqYeiMgVzk2P/OWfFpXZhhS4="/>
         </menu:category>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__targetreportindex_id" messageCode="global_generic" url="/targetreport/index" z="Zx7aXtmUvbcvu4OC5wplRplvLs4="/>
+            <menu:item id="i_controller__importdataindex_id" messageCode="global_generic" url="/importdata/index" z="DGczmMJagSBKGIKB2PV5IrFKBmE="/>
+        </menu:category>
+        <menu:category id="c_big" z="M+u7y/UbVXFPlJoxAAJpN01tHy8=">
+            <menu:item id="i_big_new" messageCode="global_menu_new" url="/bigs?form" z="8QJZdNaJL+B8yK5rfNQZX7buMts="/>
+            <menu:item id="i_big_list" messageCode="global_menu_list" url="/bigs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="QH/NiTmJEPPz8DZ1VI/3kHDuI/0="/>
+        </menu:category>
+        <menu:category id="c_document" z="IwaW5r7KHuYYhv8LICTHRKgUWao=">
+            <menu:item id="i_document_new" messageCode="global_menu_new" url="/documents?form" z="bv1eg7qAwaBE1ATd78QiQm2M3ZE="/>
+            <menu:item id="i_document_list" messageCode="global_menu_list" url="/documents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="p196XK4gvGXOnIrUwDqNS/p7fzE="/>
+        </menu:category>
     </menu:menu>
 </div>
