@@ -28,7 +28,6 @@ public class Document {
     @Size(max = 500)
     private String description;
 
-    @NotNull
     private String filename;
 
     @NotNull
@@ -36,7 +35,6 @@ public class Document {
     @Basic(fetch = FetchType.LAZY)
     private byte[] content;
     
-    @NotNull
     private String contentType;
 
     private java.lang.Long filesize;
