@@ -8,13 +8,13 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
+@RooJpaActiveRecord(finders = { "findPursuitStatusesByNameEquals", "findPursuitStatusesByCodeEquals" })
 public class PursuitStatus {
 
     @NotNull
     @Size(min = 1)
     private String code;
-	
+
     @NotNull
     @Size(min = 2)
     private String name;

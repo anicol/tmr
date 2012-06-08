@@ -20,10 +20,12 @@
         <field:display date="true" dateTimePattern="${target_rfpdate_date_format}" field="rfpDate" id="s_com_saic_tmr_domain_Target_rfpDate" object="${target}" z="ixiURAxf/UmDs4WY4u+lFFGsTq4="/>
         <field:display date="true" dateTimePattern="${target_submittaldate_date_format}" field="submittalDate" id="s_com_saic_tmr_domain_Target_submittalDate" object="${target}" z="8vSyl6cRAG2TltG5v4xqRG5aMuI="/>
         <field:display date="true" dateTimePattern="${target_awarddate_date_format}" field="awardDate" id="s_com_saic_tmr_domain_Target_awardDate" object="${target}" z="BOmkRKECHPZhVibNbZXUbNtpYyE="/>
-        <field:display field="incumbant" id="s_com_saic_tmr_domain_Target_incumbant" object="${target}" z="n4mRpDMHNYfAmdRAmyRzwwY/jN4="/>
         <field:display field="comments" id="s_com_saic_tmr_domain_Target_comments" object="${target}" z="TGPGxsnRpW5FyTTtN0jFW/DsT2g="/>
         <field:display field="winningCompany" id="s_com_saic_tmr_domain_Target_winningCompany" object="${target}" z="bi7GjgPi1qegv9WDL7dEjATGEzI="/>
         <field:display field="winningBid" id="s_com_saic_tmr_domain_Target_winningBid" object="${target}" z="+ROuvvMLFmCxsRK49ABL+j7V0ms="/>
+        <field:display field="businessUnit" id="s_com_saic_tmr_domain_Target_businessUnit" object="${target}" z="3OXDgWp+exmcADsX/bGNP/mMG1E="/>
+        <field:display field="contractRep" id="s_com_saic_tmr_domain_Target_contractRep" object="${target}" z="D5zkx7h59/45go8fyyln4ERvSgg="/>
+        <field:display field="incumbant" id="s_com_saic_tmr_domain_Target_incumbant" object="${target}" z="n4mRpDMHNYfAmdRAmyRzwwY/jN4="/>
         <field:display field="primeCompany" id="s_com_saic_tmr_domain_Target_primeCompany" object="${target}" z="7FwX6GAJn7ZWliOgUV2HeL6J96M="/>
     </page:show>
 </div>

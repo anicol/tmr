@@ -3,7 +3,6 @@
 
 package com.saic.tmr.web;
 
-import com.saic.tmr.domain.BusinessUnit;
 import com.saic.tmr.domain.OpCenter;
 import com.saic.tmr.web.OpCenterController;
 import java.io.UnsupportedEncodingException;
@@ -87,7 +86,6 @@ privileged aspect OpCenterController_Roo_Controller {
     
     void OpCenterController.populateEditForm(Model uiModel, OpCenter opCenter) {
         uiModel.addAttribute("opCenter", opCenter);
-        uiModel.addAttribute("businessunits", BusinessUnit.findAllBusinessUnits());
     }
     
     String OpCenterController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

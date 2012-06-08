@@ -7,6 +7,14 @@ import com.saic.tmr.domain.PursuitRole;
 
 privileged aspect PursuitRole_Roo_JavaBean {
     
+    public String PursuitRole.getCode() {
+        return this.code;
+    }
+    
+    public void PursuitRole.setCode(String code) {
+        this.code = code;
+    }
+    
     public String PursuitRole.getName() {
         return this.name;
     }

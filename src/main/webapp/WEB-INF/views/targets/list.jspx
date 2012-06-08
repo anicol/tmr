@@ -9,7 +9,7 @@
             <table:column id="c_com_saic_tmr_domain_Target_tracCrmNumber" property="tracCrmNumber" z="XEeRc+lfZ1+S7jX2MsP5DM/yB5E="/>
             <table:column id="c_com_saic_tmr_domain_Target_opCenter" property="opCenter" z="P7HhmDKlwovm7ez/kTPBa0j8ZVs="/>
             <table:column id="c_com_saic_tmr_domain_Target_command" property="command" z="WlKMyzn38qNZ/TXHHQZNipPWasE="/>
-            <table:column id="c_com_saic_tmr_domain_Target_contractEffort" property="contractEffort" z="2QuD4Yss4s5QxfvVun1FYtTpN+8="/>
+            <table:column id="c_com_saic_tmr_domain_Target_businessUnit" property="businessUnit" z="0de8A1kkdnT0FGMR1LVsf/lqpH0="/>
         </table:table>
     </page:list>
 </div>

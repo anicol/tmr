@@ -20,11 +20,13 @@
         <field:datetime dateTimePattern="${target_rfpdate_date_format}" field="rfpDate" id="c_com_saic_tmr_domain_Target_rfpDate" z="3Z+f3ZbRUN5c4Qv91jHF3W1pXs0="/>
         <field:datetime dateTimePattern="${target_submittaldate_date_format}" field="submittalDate" id="c_com_saic_tmr_domain_Target_submittalDate" z="gJOgubn+f7CCW2wRacGyaKX9P6k="/>
         <field:datetime dateTimePattern="${target_awarddate_date_format}" field="awardDate" id="c_com_saic_tmr_domain_Target_awardDate" z="kIyN3OTzz+8AYi7CCI23xTlQ1NY="/>
-        <field:select field="incumbant" id="c_com_saic_tmr_domain_Target_incumbant" itemValue="id" items="${companys}" path="/companys" z="YQ2dL538IZ83tSrLdaeLmbT3iRU="/>
         <field:input field="comments" id="c_com_saic_tmr_domain_Target_comments" z="cqSEFaIXMdO5F1Nt/Omnnhh8+qs="/>
         <field:select field="winningCompany" id="c_com_saic_tmr_domain_Target_winningCompany" itemValue="id" items="${companys}" path="/companys" z="RFfFx2VDW6S8BKxWwKewtJbCVIU="/>
         <field:input field="winningBid" id="c_com_saic_tmr_domain_Target_winningBid" validationMessageCode="field_invalid_number" z="do/B42Zhjn16KO+Fn/n9m7JbZjU="/>
-        <field:select field="primeCompany" id="c_com_saic_tmr_domain_Target_primeCompany" itemValue="id" items="${companys}" multiple="true" path="/companys" z="BP88rhbAJ4GGpKDeRRBJeoHjAps="/>
+        <field:select field="businessUnit" id="c_com_saic_tmr_domain_Target_businessUnit" itemValue="id" items="${businessunits}" path="/businessunits" z="w9/sMR/outNR2bn3xjToWZ5lcjU="/>
+        <field:select field="contractRep" id="c_com_saic_tmr_domain_Target_contractRep" itemValue="id" items="${people}" path="/people" z="L+orCJJfNK6yWSfPqIApYNtOODA="/>
+        <field:select field="incumbant" id="c_com_saic_tmr_domain_Target_incumbant" itemValue="id" items="${companys}" multiple="true" path="/companys" z="IOtWA8L1Cmg6UOBSYNn01iY5Hok="/>
+        <field:select field="primeCompany" id="c_com_saic_tmr_domain_Target_primeCompany" itemValue="id" items="${companys}" path="/companys" z="KpgfqCBiz/+Mw92OTbY/kFqSAiY="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_saic_tmr_domain_Target" render="${not empty dependencies}" z="39sBV/D7WQJgcGn7BCKeiczf2hw="/>
 </div>

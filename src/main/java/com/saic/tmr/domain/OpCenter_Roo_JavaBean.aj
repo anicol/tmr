@@ -3,26 +3,9 @@
 
 package com.saic.tmr.domain;
 
-import com.saic.tmr.domain.BusinessUnit;
 import com.saic.tmr.domain.OpCenter;
 
 privileged aspect OpCenter_Roo_JavaBean {
-    
-    public BusinessUnit OpCenter.getBusinessUnit() {
-        return this.businessUnit;
-    }
-    
-    public void OpCenter.setBusinessUnit(BusinessUnit businessUnit) {
-        this.businessUnit = businessUnit;
-    }
-    
-    public String OpCenter.getCode() {
-        return this.code;
-    }
-    
-    public void OpCenter.setCode(String code) {
-        this.code = code;
-    }
     
     public String OpCenter.getName() {
         return this.name;

@@ -3,6 +3,7 @@
 
 package com.saic.tmr.domain;
 
+import com.saic.tmr.domain.BusinessUnit;
 import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.Company;
 import com.saic.tmr.domain.NewBusiness;
@@ -49,6 +50,14 @@ privileged aspect Target_Roo_JavaBean {
         this.opCenter = opCenter;
     }
     
+    public BusinessUnit Target.getBusinessUnit() {
+        return this.businessUnit;
+    }
+    
+    public void Target.setBusinessUnit(BusinessUnit businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+    
     public Command Target.getCommand() {
         return this.command;
     }
@@ -89,6 +98,14 @@ privileged aspect Target_Roo_JavaBean {
         this.captureManager = captureManager;
     }
     
+    public Person Target.getContractRep() {
+        return this.contractRep;
+    }
+    
+    public void Target.setContractRep(Person contractRep) {
+        this.contractRep = contractRep;
+    }
+    
     public PursuitRole Target.getPursuitRole() {
         return this.pursuitRole;
     }
@@ -97,12 +114,12 @@ privileged aspect Target_Roo_JavaBean {
         this.pursuitRole = pursuitRole;
     }
     
-    public Set<Company> Target.getPrimeCompany() {
-        return this.primeCompany;
+    public Set<Company> Target.getIncumbant() {
+        return this.incumbant;
     }
     
-    public void Target.setPrimeCompany(Set<Company> primeCompany) {
-        this.primeCompany = primeCompany;
+    public void Target.setIncumbant(Set<Company> incumbant) {
+        this.incumbant = incumbant;
     }
     
     public Float Target.getProcurementValue() {
@@ -161,12 +178,12 @@ privileged aspect Target_Roo_JavaBean {
         this.awardDate = awardDate;
     }
     
-    public Company Target.getIncumbant() {
-        return this.incumbant;
+    public Company Target.getPrimeCompany() {
+        return this.primeCompany;
     }
     
-    public void Target.setIncumbant(Company incumbant) {
-        this.incumbant = incumbant;
+    public void Target.setPrimeCompany(Company primeCompany) {
+        this.primeCompany = primeCompany;
     }
     
     public String Target.getComments() {

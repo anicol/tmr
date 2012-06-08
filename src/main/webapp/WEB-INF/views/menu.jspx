@@ -3,6 +3,17 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+    
+        <menu:category id="c_target" z="d8AXoL/x4tzK61wG798RIUtPSv8=">
+            <menu:item id="i_target_new" messageCode="global_menu_new" url="/targets?form" z="EdeT5se2kx6dkEokeso17LOXSEs="/>
+            <menu:item id="i_target_list" messageCode="global_menu_list" url="/targets?page=1&amp;size=${empty param.size ? 10 : param.size}" z="VVLOk9g2l5R0eE+rPk9EAAMPSew="/>
+        </menu:category>
+        <menu:category label="Import" id="c_document" z="IwaW5r7KHuYYhv8LICTHRKgUWao=">
+            <menu:item label="Import" id="i_document_new" messageCode="global_menu_new" url="/documents?form" z="bv1eg7qAwaBE1ATd78QiQm2M3ZE="/>
+            <menu:item id="i_document_list" messageCode="global_menu_list" url="/documents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="p196XK4gvGXOnIrUwDqNS/p7fzE="/>
+        </menu:category>
+        <br />
+        Administrative
         <menu:category id="c_newbusiness" z="BlQlCzCSR+iTYm+oghNwtpb4Ht0=">
             <menu:item id="i_newbusiness_new" messageCode="global_menu_new" url="/newbusinesses?form" z="TdLhRdm/yPWkte6XR/ihkdJE1HQ="/>
             <menu:item id="i_newbusiness_list" messageCode="global_menu_list" url="/newbusinesses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="vsgPPSDppxC2AbUrCW4heVfgmps="/>
@@ -23,10 +34,6 @@
             <menu:item id="i_pursuitstatus_new" messageCode="global_menu_new" url="/pursuitstatuses?form" z="CZLUcZLwVAjYdZJ+bEuoPp6sKQg="/>
             <menu:item id="i_pursuitstatus_list" messageCode="global_menu_list" url="/pursuitstatuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="F3fC/YWu/zjadKB+6kELQfbFx6Q="/>
         </menu:category>
-        <menu:category id="c_target" z="d8AXoL/x4tzK61wG798RIUtPSv8=">
-            <menu:item id="i_target_new" messageCode="global_menu_new" url="/targets?form" z="EdeT5se2kx6dkEokeso17LOXSEs="/>
-            <menu:item id="i_target_list" messageCode="global_menu_list" url="/targets?page=1&amp;size=${empty param.size ? 10 : param.size}" z="VVLOk9g2l5R0eE+rPk9EAAMPSew="/>
-        </menu:category>
         <menu:category id="c_pursuitrole" z="DANRdxrv4Kiga4vnL7gUj7/Xw+0=">
             <menu:item id="i_pursuitrole_new" messageCode="global_menu_new" url="/pursuitroles?form" z="mdPAE8eXtxpbkMk++6SQ0Ti+Q0k="/>
             <menu:item id="i_pursuitrole_list" messageCode="global_menu_list" url="/pursuitroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="BGvib65A31yUX6Q4LqMGvJkHPmI="/>
@@ -42,18 +49,6 @@
         <menu:category id="c_person" z="Cz66KzcF6GdyygpbYfiE+EkFFFA=">
             <menu:item id="i_person_new" messageCode="global_menu_new" url="/people?form" z="IlD8NFD64X8egaRrgHbQeWKT68I="/>
             <menu:item id="i_person_list" messageCode="global_menu_list" url="/people?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MFjeqYeiMgVzk2P/OWfFpXZhhS4="/>
-        </menu:category>
-        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
-            <menu:item id="i_controller__targetreportindex_id" messageCode="global_generic" url="/targetreport/index" z="Zx7aXtmUvbcvu4OC5wplRplvLs4="/>
-            <menu:item id="i_controller__importdataindex_id" messageCode="global_generic" url="/importdata/index" z="DGczmMJagSBKGIKB2PV5IrFKBmE="/>
-        </menu:category>
-        <menu:category id="c_big" z="M+u7y/UbVXFPlJoxAAJpN01tHy8=">
-            <menu:item id="i_big_new" messageCode="global_menu_new" url="/bigs?form" z="8QJZdNaJL+B8yK5rfNQZX7buMts="/>
-            <menu:item id="i_big_list" messageCode="global_menu_list" url="/bigs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="QH/NiTmJEPPz8DZ1VI/3kHDuI/0="/>
-        </menu:category>
-        <menu:category id="c_document" z="IwaW5r7KHuYYhv8LICTHRKgUWao=">
-            <menu:item id="i_document_new" messageCode="global_menu_new" url="/documents?form" z="bv1eg7qAwaBE1ATd78QiQm2M3ZE="/>
-            <menu:item id="i_document_list" messageCode="global_menu_list" url="/documents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="p196XK4gvGXOnIrUwDqNS/p7fzE="/>
         </menu:category>
     </menu:menu>
 </div>

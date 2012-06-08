@@ -3,8 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_saic_tmr_domain_OpCenter" modelAttribute="opCenter" path="/opcenters" render="${empty dependencies}" z="Rxn65wDgdUGYtcgRW7qFMdlUjZI=">
-        <field:select field="businessUnit" id="c_com_saic_tmr_domain_OpCenter_businessUnit" itemValue="id" items="${businessunits}" path="/businessunits" z="jx1lnBqVApmOM+gxNFuRMN4zwQk="/>
-        <field:input field="code" id="c_com_saic_tmr_domain_OpCenter_code" min="1" required="true" z="FYIpymoB6zO9fDuyQZna1bES7P0="/>
         <field:input field="name" id="c_com_saic_tmr_domain_OpCenter_name" min="2" required="true" z="o0aXivN8/Ly1tEdHRuDqb1zfoVY="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_saic_tmr_domain_OpCenter" render="${not empty dependencies}" z="ykRLrLjHrEEGN5C12fiS+SRN4aQ="/>

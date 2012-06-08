@@ -6,7 +6,6 @@ package com.saic.tmr.web;
 import com.saic.tmr.domain.BusinessUnit;
 import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.Company;
-import com.saic.tmr.domain.Document;
 import com.saic.tmr.domain.NewBusiness;
 import com.saic.tmr.domain.OpCenter;
 import com.saic.tmr.domain.Person;
@@ -95,30 +94,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Document, String> ApplicationConversionServiceFactoryBean.getDocumentToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.Document, java.lang.String>() {
-            public String convert(Document document) {
-                return new StringBuilder().append(document.getName()).append(" ").append(document.getDescription()).append(" ").append(document.getFilename()).append(" ").append(document.getContentType()).toString();
-            }
-        };
-    }
-    
-    public Converter<Long, Document> ApplicationConversionServiceFactoryBean.getIdToDocumentConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.saic.tmr.domain.Document>() {
-            public com.saic.tmr.domain.Document convert(java.lang.Long id) {
-                return Document.findDocument(id);
-            }
-        };
-    }
-    
-    public Converter<String, Document> ApplicationConversionServiceFactoryBean.getStringToDocumentConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.saic.tmr.domain.Document>() {
-            public com.saic.tmr.domain.Document convert(String id) {
-                return getObject().convert(getObject().convert(id, Long.class), Document.class);
-            }
-        };
-    }
-    
     public Converter<NewBusiness, String> ApplicationConversionServiceFactoryBean.getNewBusinessToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.NewBusiness, java.lang.String>() {
             public String convert(NewBusiness newBusiness) {
@@ -146,7 +121,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<OpCenter, String> ApplicationConversionServiceFactoryBean.getOpCenterToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.OpCenter, java.lang.String>() {
             public String convert(OpCenter opCenter) {
-                return new StringBuilder().append(opCenter.getCode()).append(" ").append(opCenter.getName()).toString();
+                return new StringBuilder().append(opCenter.getName()).toString();
             }
         };
     }
@@ -218,7 +193,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<PursuitRole, String> ApplicationConversionServiceFactoryBean.getPursuitRoleToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.PursuitRole, java.lang.String>() {
             public String convert(PursuitRole pursuitRole) {
-                return new StringBuilder().append(pursuitRole.getName()).toString();
+                return new StringBuilder().append(pursuitRole.getCode()).append(" ").append(pursuitRole.getName()).toString();
             }
         };
     }
@@ -297,9 +272,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getCompanyToStringConverter());
         registry.addConverter(getIdToCompanyConverter());
         registry.addConverter(getStringToCompanyConverter());
-        registry.addConverter(getDocumentToStringConverter());
-        registry.addConverter(getIdToDocumentConverter());
-        registry.addConverter(getStringToDocumentConverter());
         registry.addConverter(getNewBusinessToStringConverter());
         registry.addConverter(getIdToNewBusinessConverter());
         registry.addConverter(getStringToNewBusinessConverter());

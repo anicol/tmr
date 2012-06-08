@@ -17,7 +17,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooJpaActiveRecord
 public class Document {
-	
+
 	private static final Log log = LogFactory.getLog(Document.class);
 
     @NotNull

@@ -7,7 +7,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
+@RooJpaActiveRecord(finders = { "findPeopleByLastNameLikeAndFirstNameLike", "findPeopleByLastNameEqualsAndFirstNameEquals", "findPeopleByLastNameLike" })
 public class Person {
 
     private String firstName;

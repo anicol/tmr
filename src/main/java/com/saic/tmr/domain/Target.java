@@ -30,6 +30,9 @@ public class Target {
 
     @ManyToOne
     private OpCenter opCenter;
+    
+    @ManyToOne
+    private BusinessUnit businessUnit;
 
     @ManyToOne
     private Command command;
@@ -44,12 +47,15 @@ public class Target {
 
     @ManyToOne
     private Person captureManager;
+    
+    @ManyToOne
+    private Person contractRep;
 
     @ManyToOne
     private PursuitRole pursuitRole;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    private Set<Company> primeCompany = new HashSet<Company>();
+    private Set<Company> incumbant = new HashSet<Company>();
 
     private Float procurementValue;
 
@@ -74,7 +80,7 @@ public class Target {
     private Date awardDate;
 
     @ManyToOne
-    private Company incumbant;
+    private Company primeCompany;
 
     private String comments;
 

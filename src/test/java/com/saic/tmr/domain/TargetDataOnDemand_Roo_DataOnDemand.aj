@@ -3,6 +3,8 @@
 
 package com.saic.tmr.domain;
 
+import com.saic.tmr.domain.BusinessUnit;
+import com.saic.tmr.domain.BusinessUnitDataOnDemand;
 import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.CommandDataOnDemand;
 import com.saic.tmr.domain.Company;
@@ -43,19 +45,22 @@ privileged aspect TargetDataOnDemand_Roo_DataOnDemand {
     private List<Target> TargetDataOnDemand.data;
     
     @Autowired
+    private BusinessUnitDataOnDemand TargetDataOnDemand.businessUnitDataOnDemand;
+    
+    @Autowired
     private PersonDataOnDemand TargetDataOnDemand.personDataOnDemand;
     
     @Autowired
     private CommandDataOnDemand TargetDataOnDemand.commandDataOnDemand;
     
     @Autowired
-    private CompanyDataOnDemand TargetDataOnDemand.companyDataOnDemand;
-    
-    @Autowired
     private NewBusinessDataOnDemand TargetDataOnDemand.newBusinessDataOnDemand;
     
     @Autowired
     private OpCenterDataOnDemand TargetDataOnDemand.opCenterDataOnDemand;
+    
+    @Autowired
+    private CompanyDataOnDemand TargetDataOnDemand.companyDataOnDemand;
     
     @Autowired
     private ProcurementTypeDataOnDemand TargetDataOnDemand.procurementTypeDataOnDemand;
@@ -70,14 +75,16 @@ privileged aspect TargetDataOnDemand_Roo_DataOnDemand {
         Target obj = new Target();
         setAwardDate(obj, index);
         setBuValue(obj, index);
+        setBusinessUnit(obj, index);
         setCaptureManager(obj, index);
         setCodeName(obj, index);
         setCommand(obj, index);
         setComments(obj, index);
         setContractEffort(obj, index);
-        setIncumbant(obj, index);
+        setContractRep(obj, index);
         setNewBusiness(obj, index);
         setOpCenter(obj, index);
+        setPrimeCompany(obj, index);
         setProcurementType(obj, index);
         setProcurementValue(obj, index);
         setPursuitRole(obj, index);
@@ -100,6 +107,11 @@ privileged aspect TargetDataOnDemand_Roo_DataOnDemand {
     public void TargetDataOnDemand.setBuValue(Target obj, int index) {
         Float buValue = new Integer(index).floatValue();
         obj.setBuValue(buValue);
+    }
+    
+    public void TargetDataOnDemand.setBusinessUnit(Target obj, int index) {
+        BusinessUnit businessUnit = businessUnitDataOnDemand.getRandomBusinessUnit();
+        obj.setBusinessUnit(businessUnit);
     }
     
     public void TargetDataOnDemand.setCaptureManager(Target obj, int index) {
@@ -127,9 +139,9 @@ privileged aspect TargetDataOnDemand_Roo_DataOnDemand {
         obj.setContractEffort(contractEffort);
     }
     
-    public void TargetDataOnDemand.setIncumbant(Target obj, int index) {
-        Company incumbant = companyDataOnDemand.getRandomCompany();
-        obj.setIncumbant(incumbant);
+    public void TargetDataOnDemand.setContractRep(Target obj, int index) {
+        Person contractRep = personDataOnDemand.getRandomPerson();
+        obj.setContractRep(contractRep);
     }
     
     public void TargetDataOnDemand.setNewBusiness(Target obj, int index) {
@@ -140,6 +152,11 @@ privileged aspect TargetDataOnDemand_Roo_DataOnDemand {
     public void TargetDataOnDemand.setOpCenter(Target obj, int index) {
         OpCenter opCenter = opCenterDataOnDemand.getRandomOpCenter();
         obj.setOpCenter(opCenter);
+    }
+    
+    public void TargetDataOnDemand.setPrimeCompany(Target obj, int index) {
+        Company primeCompany = companyDataOnDemand.getRandomCompany();
+        obj.setPrimeCompany(primeCompany);
     }
     
     public void TargetDataOnDemand.setProcurementType(Target obj, int index) {

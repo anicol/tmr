@@ -3,6 +3,7 @@
 
 package com.saic.tmr.web;
 
+import com.saic.tmr.domain.BusinessUnit;
 import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.Company;
 import com.saic.tmr.domain.NewBusiness;
@@ -105,6 +106,7 @@ privileged aspect TargetController_Roo_Controller {
     void TargetController.populateEditForm(Model uiModel, Target target) {
         uiModel.addAttribute("target", target);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("businessunits", BusinessUnit.findAllBusinessUnits());
         uiModel.addAttribute("commands", Command.findAllCommands());
         uiModel.addAttribute("companys", Company.findAllCompanys());
         uiModel.addAttribute("newbusinesses", NewBusiness.findAllNewBusinesses());

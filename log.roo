@@ -143,3 +143,56 @@ field number --fieldName filesize --type int
 web mvc all --package  ~.web
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-01 07:11:45
 perform eclipse
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-04 14:37:54
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-04 14:41:58
+perform eclipse
+perform eclipse
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 03:58:33
+finder list --class ~.domain.PursuitRole --filter name
+finder add --finderName findPursuitRolesByNameEquals
+finder list --class ~.domain.PursuitStatus --filter name
+finder add --finderName findPursuitStatusByNameEquals
+finder add --finderName findPursuitStatusesByNameEquals
+finder list --class ~.domain.PursuitStatus --filter code
+finder add --finderName findPursuitStatusesByCodeEquals
+// [failed] finder list --class ~.domain.Business --filter name
+finder list --class ~.domain.BusinessUnit --filter name
+finder add --finderName findBusinessUnitsByNameEquals
+finder add --finderName findCommandsByNameEquals
+// [failed] finder list --class ~.domain.Commands --filter name
+finder list --class ~.domain.Command --filter name
+finder add --finderName findCommandsByNameEquals
+finder list --class ~.domain.Company --filter name
+finder add --finderName findCompanyByNameEquals
+finder add --finderName findCompanysByNameEquals
+finder list --class ~.domain.NewBusiness --filter name
+finder add --finderName findNewBusinessesByNameEquals
+finder list --class ~.domain.OpCenter --filter name
+finder add --finderName findOpCentersByNameEquals
+finder list --class ~.domain.Person --filter lastName,firstName
+finder list --class ~.domain.Person --filter lastName,firstName --depth 2
+finder add --finderName findPeopleByLastNameLikeAndFirstNameLike
+finder add --finderName findPeopleByLastNameEqualsAndFirstNameEquals
+finder list --class ~.domain.ProcurementType --filter code
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 04:17:34
+finder list --class ~.domain.ProcurementType --filter code
+finder add --finderName findProcurementTypesByCodeEquals
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 08:58:03
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 09:02:42
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 09:03:13
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 09:19:17
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 09:35:22
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 12:03:50
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 13:00:11
+web mvc all --package ~.web
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-06 13:32:42
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-07 12:42:30
+perform eclipse
+web mvc controller --class ~.domain.Document
+web mvc all --package com.saic.tmr.web
+perform eclipse
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-07 20:02:56
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-08 10:25:18
+perform eclipse
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-08 10:25:42
+perform eclipse
