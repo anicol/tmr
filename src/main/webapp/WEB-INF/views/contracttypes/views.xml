@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="contracttypes/list">
+        <put-attribute name="body" value="/WEB-INF/views/contracttypes/list.jspx"/>
+    </definition>
+<definition extends="default" name="contracttypes/show">
+        <put-attribute name="body" value="/WEB-INF/views/contracttypes/show.jspx"/>
+    </definition>
+<definition extends="default" name="contracttypes/create">
+        <put-attribute name="body" value="/WEB-INF/views/contracttypes/create.jspx"/>
+    </definition>
+<definition extends="default" name="contracttypes/update">
+        <put-attribute name="body" value="/WEB-INF/views/contracttypes/update.jspx"/>
+    </definition>
+</tiles-definitions>

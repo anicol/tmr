@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_saic_tmr_domain_Pursuit" object="${pursuit}" path="/pursuits" z="dYKeYrKnWL+meoNH5uhs12BpwjQ=">
+        <field:display field="tracCrmNumber" id="s_com_saic_tmr_domain_Pursuit_tracCrmNumber" object="${pursuit}" z="JGzSqqNMC6y36zv0P6rsjPtuBh0="/>
+        <field:display field="businessUnit" id="s_com_saic_tmr_domain_Pursuit_businessUnit" object="${pursuit}" z="OadlMMPeRnWPOk8OWgKeYVAjphU="/>
+        <field:display field="opCenter" id="s_com_saic_tmr_domain_Pursuit_opCenter" object="${pursuit}" z="Trzu+auVTm+tI5yt9sES88fYKIQ="/>
+        <field:display field="codeName" id="s_com_saic_tmr_domain_Pursuit_codeName" object="${pursuit}" z="XYWWw1nbyipkaLKIHCR1MgsfwFw="/>
+        <field:display field="captureManager" id="s_com_saic_tmr_domain_Pursuit_captureManager" object="${pursuit}" z="uV66HFD0hy5ME0mn2a2iL6xiRVk="/>
+        <field:display field="contractsRep" id="s_com_saic_tmr_domain_Pursuit_contractsRep" object="${pursuit}" z="mcHaZcZ4PSS3zgLpzRHsSDoJ30Y="/>
+        <field:display field="subcontractsAdmin" id="s_com_saic_tmr_domain_Pursuit_subcontractsAdmin" object="${pursuit}" z="yoiLOFAq+KkLgP5RYlwTnIY37mw="/>
+        <field:display field="pursuitRole" id="s_com_saic_tmr_domain_Pursuit_pursuitRole" object="${pursuit}" z="qs3RPtxSJUzoLvwh9gqqDDtUs50="/>
+        <field:display field="primeCompany" id="s_com_saic_tmr_domain_Pursuit_primeCompany" object="${pursuit}" z="pZuZhVZUXop1UWLa4OFOoEXSduM="/>
+        <field:display field="procurementValue" id="s_com_saic_tmr_domain_Pursuit_procurementValue" object="${pursuit}" z="JXocB6f+jb+luQRupbQ41+95YHQ="/>
+        <field:display field="buValue" id="s_com_saic_tmr_domain_Pursuit_buValue" object="${pursuit}" z="geypSWJIZ+lREa6Nym3tw1OqDRw="/>
+        <field:display field="newBusiness" id="s_com_saic_tmr_domain_Pursuit_newBusiness" object="${pursuit}" z="/BHaqSkyB+rEPTFnYqd7zFo6lyA="/>
+        <field:display field="oci" id="s_com_saic_tmr_domain_Pursuit_oci" object="${pursuit}" z="6M35tykxqcGpTwR+MVhQlp6H7ig="/>
+        <field:display field="comments" id="s_com_saic_tmr_domain_Pursuit_comments" object="${pursuit}" z="OQrskYWtChcPivBan+cy8bPtolA="/>
+        <field:display field="rfp" id="s_com_saic_tmr_domain_Pursuit_rfp" object="${pursuit}" z="DklcVOrJwCNEbOvAczJGFMq0ARk="/>
+    </page:show>
+</div>

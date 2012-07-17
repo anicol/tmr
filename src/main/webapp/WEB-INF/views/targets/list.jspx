@@ -4,12 +4,15 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_saic_tmr_domain_Target" items="${targets}" z="oBRqyvNVfAV2L2S+Bo/P6X9/8YQ=">
         <table:table data="${targets}" id="l_com_saic_tmr_domain_Target" path="/targets" z="BArxmjfys7Mk0yl4MECu/u6sAgc=">
-            <table:column id="c_com_saic_tmr_domain_Target_targetNumber" property="targetNumber" z="Czlkb96qU4TX+oIJ3av4r7ahzbA="/>
             <table:column id="c_com_saic_tmr_domain_Target_pursuitStatus" property="pursuitStatus" z="LHJgzvx/QqhOH+A2K1m46aQZXvU="/>
+            <table:column id="c_com_saic_tmr_domain_Target_businessUnit" property="businessUnit" z="0de8A1kkdnT0FGMR1LVsf/lqpH0="/>
+            <table:column id="c_com_saic_tmr_domain_Target_command" property="command" z="WlKMyzn38qNZ/TXHHQZNipPWasE="/>
+            <table:column id="c_com_saic_tmr_domain_Target_rfpNumber" property="rfpNumber" z="user_managed="/>
+            <table:column id="c_com_saic_tmr_domain_Target_submittalDate" property="submittalDate" z="user_managed="/>
+            <table:column id="c_com_saic_tmr_domain_Target_contractEffort" property="contractEffort" z="user_managed"/>
+            <table:column id="c_com_saic_tmr_domain_Target_targetNumber" property="targetNumber" z="Czlkb96qU4TX+oIJ3av4r7ahzbA="/>
             <table:column id="c_com_saic_tmr_domain_Target_tracCrmNumber" property="tracCrmNumber" z="XEeRc+lfZ1+S7jX2MsP5DM/yB5E="/>
             <table:column id="c_com_saic_tmr_domain_Target_opCenter" property="opCenter" z="P7HhmDKlwovm7ez/kTPBa0j8ZVs="/>
-            <table:column id="c_com_saic_tmr_domain_Target_command" property="command" z="WlKMyzn38qNZ/TXHHQZNipPWasE="/>
-            <table:column id="c_com_saic_tmr_domain_Target_businessUnit" property="businessUnit" z="0de8A1kkdnT0FGMR1LVsf/lqpH0="/>
         </table:table>
     </page:list>
 </div>

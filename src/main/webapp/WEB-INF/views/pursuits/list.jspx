@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_saic_tmr_domain_Pursuit" items="${pursuits}" z="56xQPdc2k8u7gZT9YUo9ZoXNjgg=">
+        <table:table data="${pursuits}" id="l_com_saic_tmr_domain_Pursuit" path="/pursuits" z="gMNd9TZs6RMYBnLiSTqpj6FCyNo=">
+            <table:column id="c_com_saic_tmr_domain_Pursuit_tracCrmNumber" property="tracCrmNumber" z="CLmX/NUriA7nIC32mkcCUKcvAl4="/>
+            <table:column id="c_com_saic_tmr_domain_Pursuit_businessUnit" property="businessUnit" z="rgIZS9oyCElixApXn+F6iQOB6GQ="/>
+            <table:column id="c_com_saic_tmr_domain_Pursuit_opCenter" property="opCenter" z="K0buZG5wjijN9ZaOxK776sXDvUo="/>
+            <table:column id="c_com_saic_tmr_domain_Pursuit_codeName" property="codeName" z="nCkg4A6BPENV1GKckxNYRN5gqt4="/>
+            <table:column id="c_com_saic_tmr_domain_Pursuit_captureManager" property="captureManager" z="3PLNgUc0iUhT4y5+jLjnaNp26o4="/>
+            <table:column id="c_com_saic_tmr_domain_Pursuit_contractsRep" property="contractsRep" z="ZKgieKEuSYmFFrWeWlpdMld+vjw="/>
+        </table:table>
+    </page:list>
+</div>

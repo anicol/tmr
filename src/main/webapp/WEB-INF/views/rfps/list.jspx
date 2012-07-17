@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_saic_tmr_domain_RFP" items="${rfps}" z="cxMKqppGd4h+JUWRyu6+KxOF5p0=">
+        <table:table data="${rfps}" id="l_com_saic_tmr_domain_RFP" path="/rfps" z="Ie3Vb7pclyQ61s0A31H3fmuQ6XI=">
+            <table:column id="c_com_saic_tmr_domain_RFP_targetNumber" property="targetNumber" z="8vwrA/TngwGkvIABOy1a1clGB7c="/>
+            <table:column id="c_com_saic_tmr_domain_RFP_pursuitStatus" property="pursuitStatus" z="o3E/K8G8elqzFNJDtSY5JENyOCw="/>
+            <table:column id="c_com_saic_tmr_domain_RFP_command" property="command" z="cQ87IdfRLytRyiqW3h7XNIRVDwE="/>
+            <table:column id="c_com_saic_tmr_domain_RFP_contractEffort" property="contractEffort" z="y0jX9EVA7n9l9mNzz6NleeY9YZ4="/>
+            <table:column id="c_com_saic_tmr_domain_RFP_rfpNumber" property="rfpNumber" z="nCNKtbe3SXnT6+Esk3/MvsyVDlE="/>
+            <table:column id="c_com_saic_tmr_domain_RFP_procurementType" property="procurementType" z="aTjk/53my9qBGRCLw9IYC/VVvQs="/>
+        </table:table>
+    </page:list>
+</div>

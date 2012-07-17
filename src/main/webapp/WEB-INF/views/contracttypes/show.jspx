@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_saic_tmr_domain_ContractType" object="${contracttype}" path="/contracttypes" z="kE1kt4PSCrn9DZGUrUELMi31onU=">
+        <field:display field="name" id="s_com_saic_tmr_domain_ContractType_name" object="${contracttype}" z="80bAKt/SYD2pY2w2dU1w9e/oANU="/>
+    </page:show>
+</div>

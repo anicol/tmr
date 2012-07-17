@@ -3,15 +3,19 @@
 
 package com.saic.tmr.web;
 
+import com.saic.tmr.domain.Award;
 import com.saic.tmr.domain.BusinessUnit;
 import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.Company;
+import com.saic.tmr.domain.ContractType;
 import com.saic.tmr.domain.NewBusiness;
 import com.saic.tmr.domain.OpCenter;
 import com.saic.tmr.domain.Person;
 import com.saic.tmr.domain.ProcurementType;
+import com.saic.tmr.domain.Pursuit;
 import com.saic.tmr.domain.PursuitRole;
 import com.saic.tmr.domain.PursuitStatus;
+import com.saic.tmr.domain.RFP;
 import com.saic.tmr.domain.Target;
 import com.saic.tmr.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -21,6 +25,30 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<Award, String> ApplicationConversionServiceFactoryBean.getAwardToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.Award, java.lang.String>() {
+            public String convert(Award award) {
+                return new StringBuilder().append(award.getAwardDate()).append(' ').append(award.getWinningBid()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Award> ApplicationConversionServiceFactoryBean.getIdToAwardConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.saic.tmr.domain.Award>() {
+            public com.saic.tmr.domain.Award convert(java.lang.Long id) {
+                return Award.findAward(id);
+            }
+        };
+    }
+    
+    public Converter<String, Award> ApplicationConversionServiceFactoryBean.getStringToAwardConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.saic.tmr.domain.Award>() {
+            public com.saic.tmr.domain.Award convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Award.class);
+            }
+        };
+    }
     
     public Converter<BusinessUnit, String> ApplicationConversionServiceFactoryBean.getBusinessUnitToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.BusinessUnit, java.lang.String>() {
@@ -94,6 +122,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<ContractType, String> ApplicationConversionServiceFactoryBean.getContractTypeToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.ContractType, java.lang.String>() {
+            public String convert(ContractType contractType) {
+                return new StringBuilder().append(contractType.getName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, ContractType> ApplicationConversionServiceFactoryBean.getIdToContractTypeConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.saic.tmr.domain.ContractType>() {
+            public com.saic.tmr.domain.ContractType convert(java.lang.Long id) {
+                return ContractType.findContractType(id);
+            }
+        };
+    }
+    
+    public Converter<String, ContractType> ApplicationConversionServiceFactoryBean.getStringToContractTypeConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.saic.tmr.domain.ContractType>() {
+            public com.saic.tmr.domain.ContractType convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), ContractType.class);
+            }
+        };
+    }
+    
     public Converter<NewBusiness, String> ApplicationConversionServiceFactoryBean.getNewBusinessToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.NewBusiness, java.lang.String>() {
             public String convert(NewBusiness newBusiness) {
@@ -145,7 +197,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Person, String> ApplicationConversionServiceFactoryBean.getPersonToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.Person, java.lang.String>() {
             public String convert(Person person) {
-                return new StringBuilder().append(person.getFirstName()).append(" ").append(person.getLastName()).append(" ").append(person.getEmail()).append(" ").append(person.getPhone()).toString();
+                return new StringBuilder().append(person.getFirstName()).append(' ').append(person.getLastName()).append(' ').append(person.getEmail()).append(' ').append(person.getPhone()).toString();
             }
         };
     }
@@ -169,7 +221,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<ProcurementType, String> ApplicationConversionServiceFactoryBean.getProcurementTypeToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.ProcurementType, java.lang.String>() {
             public String convert(ProcurementType procurementType) {
-                return new StringBuilder().append(procurementType.getCode()).append(" ").append(procurementType.getName()).toString();
+                return new StringBuilder().append(procurementType.getCode()).append(' ').append(procurementType.getName()).toString();
             }
         };
     }
@@ -190,10 +242,34 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Pursuit, String> ApplicationConversionServiceFactoryBean.getPursuitToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.Pursuit, java.lang.String>() {
+            public String convert(Pursuit pursuit) {
+                return new StringBuilder().append(pursuit.getTracCrmNumber()).append(' ').append(pursuit.getCodeName()).append(' ').append(pursuit.getProcurementValue()).append(' ').append(pursuit.getBuValue()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Pursuit> ApplicationConversionServiceFactoryBean.getIdToPursuitConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.saic.tmr.domain.Pursuit>() {
+            public com.saic.tmr.domain.Pursuit convert(java.lang.Long id) {
+                return Pursuit.findPursuit(id);
+            }
+        };
+    }
+    
+    public Converter<String, Pursuit> ApplicationConversionServiceFactoryBean.getStringToPursuitConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.saic.tmr.domain.Pursuit>() {
+            public com.saic.tmr.domain.Pursuit convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Pursuit.class);
+            }
+        };
+    }
+    
     public Converter<PursuitRole, String> ApplicationConversionServiceFactoryBean.getPursuitRoleToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.PursuitRole, java.lang.String>() {
             public String convert(PursuitRole pursuitRole) {
-                return new StringBuilder().append(pursuitRole.getCode()).append(" ").append(pursuitRole.getName()).toString();
+                return new StringBuilder().append(pursuitRole.getCode()).append(' ').append(pursuitRole.getName()).toString();
             }
         };
     }
@@ -217,7 +293,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<PursuitStatus, String> ApplicationConversionServiceFactoryBean.getPursuitStatusToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.PursuitStatus, java.lang.String>() {
             public String convert(PursuitStatus pursuitStatus) {
-                return new StringBuilder().append(pursuitStatus.getCode()).append(" ").append(pursuitStatus.getName()).toString();
+                return new StringBuilder().append(pursuitStatus.getCode()).append(' ').append(pursuitStatus.getName()).toString();
             }
         };
     }
@@ -238,10 +314,34 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<RFP, String> ApplicationConversionServiceFactoryBean.getRFPToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.RFP, java.lang.String>() {
+            public String convert(RFP rFP) {
+                return new StringBuilder().append(rFP.getTargetNumber()).append(' ').append(rFP.getContractEffort()).append(' ').append(rFP.getRfpNumber()).append(' ').append(rFP.getAdvanceNoticeEndDate()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, RFP> ApplicationConversionServiceFactoryBean.getIdToRFPConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.saic.tmr.domain.RFP>() {
+            public com.saic.tmr.domain.RFP convert(java.lang.Long id) {
+                return RFP.findRFP(id);
+            }
+        };
+    }
+    
+    public Converter<String, RFP> ApplicationConversionServiceFactoryBean.getStringToRFPConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.saic.tmr.domain.RFP>() {
+            public com.saic.tmr.domain.RFP convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), RFP.class);
+            }
+        };
+    }
+    
     public Converter<Target, String> ApplicationConversionServiceFactoryBean.getTargetToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.Target, java.lang.String>() {
             public String convert(Target target) {
-                return new StringBuilder().append(target.getTargetNumber()).append(" ").append(target.getTracCrmNumber()).append(" ").append(target.getContractEffort()).append(" ").append(target.getRfpNumber()).toString();
+                return new StringBuilder().append(target.getTargetNumber()).append(' ').append(target.getTracCrmNumber()).append(' ').append(target.getContractEffort()).append(' ').append(target.getRfpNumber()).toString();
             }
         };
     }
@@ -263,6 +363,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getAwardToStringConverter());
+        registry.addConverter(getIdToAwardConverter());
+        registry.addConverter(getStringToAwardConverter());
         registry.addConverter(getBusinessUnitToStringConverter());
         registry.addConverter(getIdToBusinessUnitConverter());
         registry.addConverter(getStringToBusinessUnitConverter());
@@ -272,6 +375,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getCompanyToStringConverter());
         registry.addConverter(getIdToCompanyConverter());
         registry.addConverter(getStringToCompanyConverter());
+        registry.addConverter(getContractTypeToStringConverter());
+        registry.addConverter(getIdToContractTypeConverter());
+        registry.addConverter(getStringToContractTypeConverter());
         registry.addConverter(getNewBusinessToStringConverter());
         registry.addConverter(getIdToNewBusinessConverter());
         registry.addConverter(getStringToNewBusinessConverter());
@@ -284,12 +390,18 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getProcurementTypeToStringConverter());
         registry.addConverter(getIdToProcurementTypeConverter());
         registry.addConverter(getStringToProcurementTypeConverter());
+        registry.addConverter(getPursuitToStringConverter());
+        registry.addConverter(getIdToPursuitConverter());
+        registry.addConverter(getStringToPursuitConverter());
         registry.addConverter(getPursuitRoleToStringConverter());
         registry.addConverter(getIdToPursuitRoleConverter());
         registry.addConverter(getStringToPursuitRoleConverter());
         registry.addConverter(getPursuitStatusToStringConverter());
         registry.addConverter(getIdToPursuitStatusConverter());
         registry.addConverter(getStringToPursuitStatusConverter());
+        registry.addConverter(getRFPToStringConverter());
+        registry.addConverter(getIdToRFPConverter());
+        registry.addConverter(getStringToRFPConverter());
         registry.addConverter(getTargetToStringConverter());
         registry.addConverter(getIdToTargetConverter());
         registry.addConverter(getStringToTargetConverter());

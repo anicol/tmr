@@ -196,3 +196,55 @@ perform eclipse
 perform eclipse
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-08 10:25:42
 perform eclipse
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-07-09 11:28:25
+entity jpa --class ~.domain.Award --testAutomatically 
+field reference --fieldName Winner --type ~.domain.Company
+field date --fieldName awardDate --type java.util.Date
+field number --fieldName winningBid --type java.lang.Float
+perform eclipse
+entity jpa --class ~.domain.Pursuit --testAutomatically 
+field string --fieldName tracCrmNumber
+field reference --fieldName businessUnit --type ~.domain.BusinessUnit
+field reference --fieldName opCenter --type ~.domain.OpCenter
+field string --fieldName codeName 
+field reference --fieldName captureManager --type ~.domain.Person
+field reference --fieldName contractsRep --type ~.domain.Person
+field reference --fieldName subcontractsAdmin --type ~.domain.Person
+field reference --fieldName pursuitRole --type ~.domain.PursuitRole
+field reference --fieldName primeCompany --type ~.domain.Company
+field number --fieldName procurementValue --type java.lang.Float
+field number --fieldName buValue --type java.lang.Float
+field reference --fieldName newBusiness --type ~.domain.NewBusiness
+field boolean --fieldName oci
+field string --fieldName comments
+perform eclipse
+entity jpa --class ~.domain.RFP --testAutomatically 
+hint
+field number --fieldName targetNumber --type int
+field reference --fieldName pursuitStatus --type ~.domain.PursuitStatus
+field reference --fieldName command --type ~.domain.Command
+field string --fieldName contractEffort --notNull --sizeMin 2
+field string --fieldName rfpNumber
+field reference --fieldName procurementType --type ~.domain.ProcurementType
+field date --fieldName advanceNoticeEndDate --type java.util.Date
+field date --fieldName rfpIssueDate --type java.util.Date
+field set --fieldName incumbents --type ~.domain.Company
+field date --fieldName submittalDate --type java.util.Date
+field string --fieldName comments
+perform eclipse
+entity jpa --class ~.domain.ContractType --testAutomatically 
+field string --fieldName name --notNull --sizeMin 2
+perform eclipse
+perform eclipse
+test integration
+perform tests
+web mvc all --package ~.web
+perform eclipse
+perform eclipse
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-07-17 13:01:05
+hint
+hint entities
+focus --class ~.domain.Pursuit
+field reference --fieldName rfp --type ~.domain.RFP
+focus --class ~.domain.Award
+field reference --fieldName rfp --type ~.domain.RFP
