@@ -10,7 +10,6 @@ import com.saic.tmr.domain.OpCenter;
 import com.saic.tmr.domain.Person;
 import com.saic.tmr.domain.Pursuit;
 import com.saic.tmr.domain.PursuitRole;
-import com.saic.tmr.domain.RFP;
 
 privileged aspect Pursuit_Roo_JavaBean {
     
@@ -124,14 +123,6 @@ privileged aspect Pursuit_Roo_JavaBean {
     
     public void Pursuit.setComments(String comments) {
         this.comments = comments;
-    }
-    
-    public RFP Pursuit.getRfp() {
-        return this.rfp;
-    }
-    
-    public void Pursuit.setRfp(RFP rfp) {
-        this.rfp = rfp;
     }
     
 }

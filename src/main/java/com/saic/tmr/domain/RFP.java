@@ -37,7 +37,7 @@ public class RFP {
 
     @ManyToOne
     private ProcurementType procurementType;
-    
+
     @ManyToOne
     private ContractType contractType;
 
@@ -57,5 +57,7 @@ public class RFP {
     private Date submittalDate;
 
     private String comments;
-    
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Award> awards = new HashSet<Award>();
 }

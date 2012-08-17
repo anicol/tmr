@@ -3,6 +3,7 @@
 
 package com.saic.tmr.web;
 
+import com.saic.tmr.domain.Award;
 import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.Company;
 import com.saic.tmr.domain.ContractType;
@@ -102,6 +103,7 @@ privileged aspect RFPController_Roo_Controller {
     void RFPController.populateEditForm(Model uiModel, RFP RFP_) {
         uiModel.addAttribute("RFP_", RFP_);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("awards", Award.findAllAwards());
         uiModel.addAttribute("commands", Command.findAllCommands());
         uiModel.addAttribute("companys", Company.findAllCompanys());
         uiModel.addAttribute("contracttypes", ContractType.findAllContractTypes());

@@ -7,7 +7,6 @@
             <table:column id="c_com_saic_tmr_domain_Award_Winner" property="winner" z="XanH5PXUxb1IQzv2AwOjHuTCcTE="/>
             <table:column date="true" dateTimePattern="${award_awarddate_date_format}" id="c_com_saic_tmr_domain_Award_awardDate" property="awardDate" z="9TjTN8pPmTRnQv2/ZgfBj2CmlWs="/>
             <table:column id="c_com_saic_tmr_domain_Award_winningBid" property="winningBid" z="fYkE2SOzC8DKcy7WczK0v0SyOok="/>
-            <table:column id="c_com_saic_tmr_domain_Award_rfp" property="rfp" z="+iB/HdPpZpNV8qCabbBA5O7Lp/0="/>
         </table:table>
     </page:list>
 </div>

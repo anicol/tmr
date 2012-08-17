@@ -5,7 +5,6 @@ package com.saic.tmr.domain;
 
 import com.saic.tmr.domain.Award;
 import com.saic.tmr.domain.Company;
-import com.saic.tmr.domain.RFP;
 import java.util.Date;
 
 privileged aspect Award_Roo_JavaBean {
@@ -32,14 +31,6 @@ privileged aspect Award_Roo_JavaBean {
     
     public void Award.setWinningBid(Float winningBid) {
         this.winningBid = winningBid;
-    }
-    
-    public RFP Award.getRfp() {
-        return this.rfp;
-    }
-    
-    public void Award.setRfp(RFP rfp) {
-        this.rfp = rfp;
     }
     
 }

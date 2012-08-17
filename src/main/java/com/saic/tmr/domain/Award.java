@@ -23,6 +23,6 @@ public class Award {
 
     private Float winningBid;
 
-    @ManyToOne
-    private RFP rfp;
+    //@ManyToOne
+    //private RFP rfp;
 }

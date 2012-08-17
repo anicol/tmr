@@ -15,5 +15,6 @@
         <field:display field="incumbents" id="s_com_saic_tmr_domain_RFP_incumbents" object="${rfp_}" z="UJCzdsoxsSSgDja4el161QMX42o="/>
         <field:display date="true" dateTimePattern="${RFP__submittaldate_date_format}" field="submittalDate" id="s_com_saic_tmr_domain_RFP_submittalDate" object="${rfp_}" z="1iJlthCdpmwEYl3qLc7oMlGIrKE="/>
         <field:display field="comments" id="s_com_saic_tmr_domain_RFP_comments" object="${rfp_}" z="5pE0mizre2JzSWjMDBtL5NTNvQA="/>
-    </page:show>
+        <field:select field="rfpsawards" id="c_com_saic_tmr_domain_RFP_awards"  itemValue="id" items="${rfps.awards}" multiple="true" path="/awards" z="user_managed"/>
+     </page:show>
 </div>

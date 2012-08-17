@@ -17,6 +17,5 @@
         <field:select field="newBusiness" id="c_com_saic_tmr_domain_Pursuit_newBusiness" itemValue="id" items="${newbusinesses}" path="/newbusinesses" z="N5a4EdACKfL3puZzqTR/NKf0/jg="/>
         <field:checkbox field="oci" id="c_com_saic_tmr_domain_Pursuit_oci" z="5L2GNiEi1d/39Q8lG/+6ZR1cO5c="/>
         <field:input field="comments" id="c_com_saic_tmr_domain_Pursuit_comments" z="YQXD3l0CG3XDcHaPKYDh5Cz1qwY="/>
-        <field:select field="rfp" id="c_com_saic_tmr_domain_Pursuit_rfp" itemValue="id" items="${rfps}" path="/rfps" z="4JOuOzVU+nv7EChgwPyYwFAn9YE="/>
     </form:update>
 </div>

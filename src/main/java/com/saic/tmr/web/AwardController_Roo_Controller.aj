@@ -5,7 +5,6 @@ package com.saic.tmr.web;
 
 import com.saic.tmr.domain.Award;
 import com.saic.tmr.domain.Company;
-import com.saic.tmr.domain.RFP;
 import com.saic.tmr.web.AwardController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -98,7 +97,6 @@ privileged aspect AwardController_Roo_Controller {
         uiModel.addAttribute("award", award);
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("companys", Company.findAllCompanys());
-        uiModel.addAttribute("rfps", RFP.findAllRFPS());
     }
     
     String AwardController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

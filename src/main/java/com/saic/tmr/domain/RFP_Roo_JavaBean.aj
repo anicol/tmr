@@ -3,6 +3,7 @@
 
 package com.saic.tmr.domain;
 
+import com.saic.tmr.domain.Award;
 import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.Company;
 import com.saic.tmr.domain.ContractType;
@@ -108,6 +109,14 @@ privileged aspect RFP_Roo_JavaBean {
     
     public void RFP.setComments(String comments) {
         this.comments = comments;
+    }
+    
+    public Set<Award> RFP.getAwards() {
+        return this.awards;
+    }
+    
+    public void RFP.setAwards(Set<Award> awards) {
+        this.awards = awards;
     }
     
 }

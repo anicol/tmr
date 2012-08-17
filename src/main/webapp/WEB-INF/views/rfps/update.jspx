@@ -15,5 +15,7 @@
         <field:select field="incumbents" id="c_com_saic_tmr_domain_RFP_incumbents" itemValue="id" items="${companys}" multiple="true" path="/companys" z="Nn+AmvQEucgFo24ISaxBEJkuz6A="/>
         <field:datetime dateTimePattern="${RFP__submittaldate_date_format}" field="submittalDate" id="c_com_saic_tmr_domain_RFP_submittalDate" z="mIMjmt5is6Xg5zCkLoQhyl9beWo="/>
         <field:input field="comments" id="c_com_saic_tmr_domain_RFP_comments" z="dk/1bfyhscKqHGo4vi4XoMY+DV4="/>
+        <field:select field="awards" id="c_com_saic_tmr_domain_RFP_awards"  itemValue="id" items="${awards}" multiple="true" path="/awards" z="user_managed"/>
+        <!-- <field:simple field="awards" id="c_com_saic_tmr_domain_RFP_awards" messageCode="entity_reference_not_managed" messageCodeAttribute="Award" z="zQ3T/rZD+isCsQ29dDSgXwWzqPo="/>-->
     </form:update>
 </div>

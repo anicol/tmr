@@ -46,6 +46,6 @@ public class Pursuit {
 
     private String comments;
 
-    @ManyToOne
-    private RFP rfp;
+    //@ManyToOne
+    //private RFP rfp;
 }
