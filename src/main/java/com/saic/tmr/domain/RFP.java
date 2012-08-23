@@ -3,6 +3,8 @@ package com.saic.tmr.domain;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.List;
+import java.util.ArrayList;
 import javax.persistence.CascadeType;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -58,6 +60,6 @@ public class RFP {
 
     private String comments;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private Set<Award> awards = new HashSet<Award>();
+    @OneToMany(mappedBy="rfp", cascade = CascadeType.ALL, orphanRemoval=true)
+    private List<Award> awards = new ArrayList<Award>();
 }
