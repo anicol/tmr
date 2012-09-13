@@ -11,6 +11,7 @@ import com.saic.tmr.domain.ProcurementType;
 import com.saic.tmr.domain.PursuitStatus;
 import com.saic.tmr.domain.RFP;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 privileged aspect RFP_Roo_JavaBean {
@@ -111,11 +112,11 @@ privileged aspect RFP_Roo_JavaBean {
         this.comments = comments;
     }
     
-    public Set<Award> RFP.getAwards() {
+    public List<Award> RFP.getAwards() {
         return this.awards;
     }
     
-    public void RFP.setAwards(Set<Award> awards) {
+    public void RFP.setAwards(List<Award> awards) {
         this.awards = awards;
     }
     

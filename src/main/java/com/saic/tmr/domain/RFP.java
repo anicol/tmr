@@ -60,6 +60,6 @@ public class RFP {
 
     private String comments;
 
-    @OneToMany(mappedBy="rfp", cascade = CascadeType.ALL, orphanRemoval=true)
+    @OneToMany(mappedBy="RFP", cascade = CascadeType.ALL, orphanRemoval=true)
     private List<Award> awards = new ArrayList<Award>();
 }
