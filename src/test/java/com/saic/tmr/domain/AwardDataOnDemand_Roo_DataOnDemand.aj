@@ -6,6 +6,7 @@ package com.saic.tmr.domain;
 import com.saic.tmr.domain.Award;
 import com.saic.tmr.domain.AwardDataOnDemand;
 import com.saic.tmr.domain.CompanyDataOnDemand;
+import com.saic.tmr.domain.RFPDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -26,6 +27,9 @@ privileged aspect AwardDataOnDemand_Roo_DataOnDemand {
     private Random AwardDataOnDemand.rnd = new SecureRandom();
     
     private List<Award> AwardDataOnDemand.data;
+    
+    @Autowired
+    private RFPDataOnDemand AwardDataOnDemand.rFPDataOnDemand;
     
     @Autowired
     private CompanyDataOnDemand AwardDataOnDemand.companyDataOnDemand;

@@ -259,3 +259,8 @@ web mvc scaffold --class ~.web.RFPController
 perform eclipse
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-08-16 14:15:33
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-09-07 14:37:33
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-15 20:55:34
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-24 21:13:09
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-24 23:18:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-24 23:19:45
+perform eclipse

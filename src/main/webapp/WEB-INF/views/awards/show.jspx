@@ -6,5 +6,6 @@
         <field:display field="winner" id="s_com_saic_tmr_domain_Award_Winner" object="${award}" z="/mDxWsDUuML1J1M4Ha6rZad2rIQ="/>
         <field:display date="true" dateTimePattern="${award_awarddate_date_format}" field="awardDate" id="s_com_saic_tmr_domain_Award_awardDate" object="${award}" z="hSzgcZoetw4AouxJis3+/+UpHuw="/>
         <field:display field="winningBid" id="s_com_saic_tmr_domain_Award_winningBid" object="${award}" z="2yF6zehrgtRdyCWAthua5s3QpS0="/>
+        <field:display field="rfp" id="s_com_saic_tmr_domain_Award_rfp" object="${award}" z="VXY5/5NSFTre+75+LqfxF3cKaXk="/>
     </page:show>
 </div>
