@@ -1,10 +1,10 @@
 package com.saic.tmr.domain;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.Set;
 import java.util.List;
-import java.util.ArrayList;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -20,7 +20,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
+@RooJpaActiveRecord(finders = { "findRFPSByPursuitStatusAndRfpIssueDateGreaterThanEquals" })
 public class RFP {
 
     private int targetNumber;
@@ -60,6 +60,6 @@ public class RFP {
 
     private String comments;
 
-    @OneToMany(mappedBy="rfp", cascade = CascadeType.ALL, orphanRemoval=true)
+    @OneToMany(mappedBy = "rfp", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Award> awards = new ArrayList<Award>();
 }

@@ -2,7 +2,7 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_com_saic_tmr_domain_RFP" object="${rfp_}" path="/rfps" z="?">
+    <page:show id="ps_com_saic_tmr_domain_RFP" object="${rfp_}" path="/rfps" z="nUveAL0DAAfFypXRfIsXI30bUqs=">
         <field:display field="targetNumber" id="s_com_saic_tmr_domain_RFP_targetNumber" object="${rfp_}" z="NSeP7LtzBJoc9km2z1cG7eufax8="/>
         <field:display field="pursuitStatus" id="s_com_saic_tmr_domain_RFP_pursuitStatus" object="${rfp_}" z="1A0Rrfe5l/iBPXuBNylND1TV0hM="/>
         <field:display field="command" id="s_com_saic_tmr_domain_RFP_command" object="${rfp_}" z="cEELhGcfYfkL4UaW8/N136WZvoc="/>
@@ -15,12 +15,6 @@
         <field:display field="incumbents" id="s_com_saic_tmr_domain_RFP_incumbents" object="${rfp_}" z="UJCzdsoxsSSgDja4el161QMX42o="/>
         <field:display date="true" dateTimePattern="${RFP__submittaldate_date_format}" field="submittalDate" id="s_com_saic_tmr_domain_RFP_submittalDate" object="${rfp_}" z="1iJlthCdpmwEYl3qLc7oMlGIrKE="/>
         <field:display field="comments" id="s_com_saic_tmr_domain_RFP_comments" object="${rfp_}" z="5pE0mizre2JzSWjMDBtL5NTNvQA="/>
-        <table:table data="${awards}" id="l_com_saic_tmr_domain_Award" path="/awards" z="gWLvF2kj27ft4iz09NHy7CETWok=">
-            <table:column id="c_com_saic_tmr_domain_Award_Winner" property="winner" z="XanH5PXUxb1IQzv2AwOjHuTCcTE="/>
-            <table:column date="true" dateTimePattern="${award_awarddate_date_format}" id="c_com_saic_tmr_domain_Award_awardDate" property="awardDate" z="9TjTN8pPmTRnQv2/ZgfBj2CmlWs="/>
-            <table:column id="c_com_saic_tmr_domain_Award_winningBid" property="winningBid" z="fYkE2SOzC8DKcy7WczK0v0SyOok="/>
-	    </table:table>
-        
     </page:show>
     <!-- <page:list id="pl_com_saic_tmr_domain_Award" items="${awards}" z="rfR8U0tEyhUzIdHc57PGs78l7CM=">
         

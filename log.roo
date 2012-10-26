@@ -264,3 +264,9 @@ perform eclipse
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-24 23:18:25
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-24 23:19:45
 perform eclipse
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-25 20:21:22
+finder list --class ~.domain.RFP
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-25 20:28:07
+finder list --class ~.domain.RFP --filter Pursuit,Issue
+finder add --finderName findRFPSByPursuitStatus
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-25 21:01:50
