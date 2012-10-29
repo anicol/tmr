@@ -11,6 +11,7 @@ import com.saic.tmr.domain.PersonDataOnDemand;
 import com.saic.tmr.domain.Pursuit;
 import com.saic.tmr.domain.PursuitDataOnDemand;
 import com.saic.tmr.domain.PursuitRoleDataOnDemand;
+import com.saic.tmr.domain.RFPDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -46,6 +47,9 @@ privileged aspect PursuitDataOnDemand_Roo_DataOnDemand {
     
     @Autowired
     private PursuitRoleDataOnDemand PursuitDataOnDemand.pursuitRoleDataOnDemand;
+    
+    @Autowired
+    private RFPDataOnDemand PursuitDataOnDemand.rFPDataOnDemand;
     
     public Pursuit PursuitDataOnDemand.getNewTransientPursuit(int index) {
         Pursuit obj = new Pursuit();

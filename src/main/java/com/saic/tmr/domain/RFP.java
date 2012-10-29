@@ -62,4 +62,7 @@ public class RFP {
 
     @OneToMany(mappedBy = "rfp", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Award> awards = new ArrayList<Award>();
+    
+    @OneToMany(mappedBy = "rfp", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Pursuit> pursuits = new ArrayList<Pursuit>();
 }

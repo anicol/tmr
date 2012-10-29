@@ -270,3 +270,4 @@ finder list --class ~.domain.RFP
 finder list --class ~.domain.RFP --filter Pursuit,Issue
 finder add --finderName findRFPSByPursuitStatus
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-25 21:01:50
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-29 14:29:46

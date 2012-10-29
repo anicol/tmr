@@ -24,5 +24,6 @@
             </p>
         </c:forEach>
         <field:simple field="awards" id="c_com_saic_tmr_domain_RFP_awards" messageCode="entity_reference_not_managed" messageCodeAttribute="Award" z="zQ3T/rZD+isCsQ29dDSgXwWzqPo="/>
+        <field:simple field="pursuits" id="c_com_saic_tmr_domain_RFP_pursuits" messageCode="entity_reference_not_managed" messageCodeAttribute="Pursuit" z="nleOSffyGXD9Be2lGGyndAvE+UQ="/>
     </form:update>
 </div>

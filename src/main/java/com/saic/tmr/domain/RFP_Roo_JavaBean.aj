@@ -8,6 +8,7 @@ import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.Company;
 import com.saic.tmr.domain.ContractType;
 import com.saic.tmr.domain.ProcurementType;
+import com.saic.tmr.domain.Pursuit;
 import com.saic.tmr.domain.PursuitStatus;
 import com.saic.tmr.domain.RFP;
 import java.util.Date;
@@ -118,6 +119,14 @@ privileged aspect RFP_Roo_JavaBean {
     
     public void RFP.setAwards(List<Award> awards) {
         this.awards = awards;
+    }
+    
+    public List<Pursuit> RFP.getPursuits() {
+        return this.pursuits;
+    }
+    
+    public void RFP.setPursuits(List<Pursuit> pursuits) {
+        this.pursuits = pursuits;
     }
     
 }

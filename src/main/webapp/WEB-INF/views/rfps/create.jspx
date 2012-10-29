@@ -16,6 +16,7 @@
         <field:datetime dateTimePattern="${RFP__submittaldate_date_format}" field="submittalDate" id="c_com_saic_tmr_domain_RFP_submittalDate" z="mIMjmt5is6Xg5zCkLoQhyl9beWo="/>
         <field:input field="comments" id="c_com_saic_tmr_domain_RFP_comments" z="dk/1bfyhscKqHGo4vi4XoMY+DV4="/>
         <field:simple field="awards" id="c_com_saic_tmr_domain_RFP_awards" messageCode="entity_reference_not_managed" messageCodeAttribute="Award" z="zQ3T/rZD+isCsQ29dDSgXwWzqPo="/>
+        <field:simple field="pursuits" id="c_com_saic_tmr_domain_RFP_pursuits" messageCode="entity_reference_not_managed" messageCodeAttribute="Pursuit" z="nleOSffyGXD9Be2lGGyndAvE+UQ="/>
     </form:create>
     <!-- <form:dependency dependencies="${dependencies}" id="d_com_saic_tmr_domain_RFP" render="${not empty dependencies}" z="kASOrN+DF7X9UsL2aI0g9zDZe8w="/>-->
     <form:dependency dependencies="${dependencies}" id="d_com_saic_tmr_domain_RFP" render="${not empty dependencies}" z="kASOrN+DF7X9UsL2aI0g9zDZe8w="/>

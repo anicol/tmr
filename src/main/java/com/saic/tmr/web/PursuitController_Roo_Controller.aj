@@ -10,6 +10,7 @@ import com.saic.tmr.domain.OpCenter;
 import com.saic.tmr.domain.Person;
 import com.saic.tmr.domain.Pursuit;
 import com.saic.tmr.domain.PursuitRole;
+import com.saic.tmr.domain.RFP;
 import com.saic.tmr.web.PursuitController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -98,6 +99,7 @@ privileged aspect PursuitController_Roo_Controller {
         uiModel.addAttribute("opcenters", OpCenter.findAllOpCenters());
         uiModel.addAttribute("people", Person.findAllPeople());
         uiModel.addAttribute("pursuitroles", PursuitRole.findAllPursuitRoles());
+        uiModel.addAttribute("rfps", RFP.findAllRFPS());
     }
     
     String PursuitController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

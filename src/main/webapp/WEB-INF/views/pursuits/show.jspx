@@ -17,5 +17,6 @@
         <field:display field="newBusiness" id="s_com_saic_tmr_domain_Pursuit_newBusiness" object="${pursuit}" z="/BHaqSkyB+rEPTFnYqd7zFo6lyA="/>
         <field:display field="oci" id="s_com_saic_tmr_domain_Pursuit_oci" object="${pursuit}" z="6M35tykxqcGpTwR+MVhQlp6H7ig="/>
         <field:display field="comments" id="s_com_saic_tmr_domain_Pursuit_comments" object="${pursuit}" z="OQrskYWtChcPivBan+cy8bPtolA="/>
+        <field:display field="rfp" id="s_com_saic_tmr_domain_Pursuit_rfp" object="${pursuit}" z="DklcVOrJwCNEbOvAczJGFMq0ARk="/>
     </page:show>
 </div>

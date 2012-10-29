@@ -1,5 +1,6 @@
 package com.saic.tmr.domain;
 
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -45,7 +46,9 @@ public class Pursuit {
     private Boolean oci;
 
     private String comments;
-
-    //@ManyToOne
-    //private RFP rfp;
+    
+    @ManyToOne
+    @JoinColumn(name="rfp_id")
+    private RFP rfp;
+    
 }

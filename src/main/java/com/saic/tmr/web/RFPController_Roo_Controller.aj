@@ -8,6 +8,7 @@ import com.saic.tmr.domain.Command;
 import com.saic.tmr.domain.Company;
 import com.saic.tmr.domain.ContractType;
 import com.saic.tmr.domain.ProcurementType;
+import com.saic.tmr.domain.Pursuit;
 import com.saic.tmr.domain.PursuitStatus;
 import com.saic.tmr.domain.RFP;
 import com.saic.tmr.web.RFPController;
@@ -108,6 +109,7 @@ privileged aspect RFPController_Roo_Controller {
         uiModel.addAttribute("companys", Company.findAllCompanys());
         uiModel.addAttribute("contracttypes", ContractType.findAllContractTypes());
         uiModel.addAttribute("procurementtypes", ProcurementType.findAllProcurementTypes());
+        uiModel.addAttribute("pursuits", Pursuit.findAllPursuits());
         uiModel.addAttribute("pursuitstatuses", PursuitStatus.findAllPursuitStatuses());
     }
     
