@@ -20,7 +20,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "findRFPSByPursuitStatusAndRfpIssueDateGreaterThanEquals" })
+@RooJpaActiveRecord(finders = { "findRFPSByPursuitStatusAndRfpIssueDateGreaterThanEquals", "findRFPSByTargetNumber" })
 public class RFP {
 
     private int targetNumber;
@@ -60,9 +60,9 @@ public class RFP {
 
     private String comments;
 
-    @OneToMany(mappedBy = "rfp", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "rfp", cascade = {CascadeType.PERSIST, CascadeType.ALL}, orphanRemoval = true)
     private List<Award> awards = new ArrayList<Award>();
-    
-    @OneToMany(mappedBy = "rfp", cascade = CascadeType.ALL, orphanRemoval = true)
+
+    @OneToMany(mappedBy = "rfp", cascade = {CascadeType.PERSIST, CascadeType.ALL}, orphanRemoval = true)
     private List<Pursuit> pursuits = new ArrayList<Pursuit>();
 }

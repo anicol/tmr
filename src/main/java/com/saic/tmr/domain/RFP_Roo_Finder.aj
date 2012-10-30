@@ -21,4 +21,11 @@ privileged aspect RFP_Roo_Finder {
         return q;
     }
     
+    public static TypedQuery<RFP> RFP.findRFPSByTargetNumber(int targetNumber) {
+        EntityManager em = RFP.entityManager();
+        TypedQuery<RFP> q = em.createQuery("SELECT o FROM RFP AS o WHERE o.targetNumber = :targetNumber", RFP.class);
+        q.setParameter("targetNumber", targetNumber);
+        return q;
+    }
+    
 }

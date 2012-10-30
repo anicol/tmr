@@ -9,6 +9,7 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import javax.servlet.ServletException;
@@ -84,79 +85,85 @@ public class DocumentController {
         }
         HSSFSheet sheet = workBook.getSheetAt(0);
         Iterator<HSSFRow> rows = sheet.rowIterator();
+        int previousTargetNumber = 0;
         rows.next();
         while (rows.hasNext()) {
             HSSFRow row = rows.next();
             log.error("Row No.: " + row.getRowNum());
             Iterator<HSSFCell> cells = row.cellIterator();
-            Target target = new Target();
+            RFP rfp = new RFP();
+            Pursuit pursuit = new Pursuit();
+            Award award = new Award();
             HSSFCell cellA = cells.next();
+            int targetNumber = 0;
             if (cellA.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-                target.setTargetNumber((int) cellA.getNumericCellValue());
+                rfp.setTargetNumber((int) cellA.getNumericCellValue());
+                targetNumber = (int) cellA.getNumericCellValue();
             } else if (cellA.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                target.setTargetNumber(Integer.parseInt(cellA.getRichStringCellValue().toString()));
-            }
+                rfp.setTargetNumber(Integer.parseInt(cellA.getRichStringCellValue().toString().trim()));
+                targetNumber = Integer.parseInt(cellA.getRichStringCellValue().toString().trim());
+            }            
             HSSFCell cellB = cells.next();
             if (cellB.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                target.setPursuitStatus((PursuitStatus) PursuitStatus.findPursuitStatusesByCodeEquals(cellB.getRichStringCellValue().toString()).getSingleResult());
+                rfp.setPursuitStatus((PursuitStatus) PursuitStatus.findPursuitStatusesByCodeEquals(cellB.getRichStringCellValue().toString().trim()).getSingleResult());
             }
             HSSFCell cellC = cells.next();
             if (cellC.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                target.setTracCrmNumber(cellC.getRichStringCellValue().toString());
+                pursuit.setTracCrmNumber(cellC.getRichStringCellValue().toString().trim());
             }
             HSSFCell cellD = cells.next();
             if (cellD.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                List<BusinessUnit> results = BusinessUnit.findBusinessUnitsByNameEquals(cellD.getRichStringCellValue().toString()).getResultList();
+                List<BusinessUnit> results = BusinessUnit.findBusinessUnitsByNameEquals(cellD.getRichStringCellValue().toString().trim()).getResultList();
                 if (results.size() == 0) {
                     BusinessUnit businessUnit = new BusinessUnit();
-                    businessUnit.setName(cellD.getRichStringCellValue().toString());
+                    businessUnit.setName(cellD.getRichStringCellValue().toString().trim());
                     businessUnit.persist();
-                    target.setBusinessUnit(businessUnit);
+                    pursuit.setBusinessUnit(businessUnit);
                 } else if (results.size() == 1) {
-                    target.setBusinessUnit((BusinessUnit) results.get(0));
+                    pursuit.setBusinessUnit((BusinessUnit) results.get(0));
                 } else {
                     log.error("Database error");
                 }
             }
             HSSFCell cellE = cells.next();
             if (cellE.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                List<OpCenter> results = OpCenter.findOpCentersByNameEquals(cellE.getRichStringCellValue().toString()).getResultList();
+                List<OpCenter> results = OpCenter.findOpCentersByNameEquals(cellE.getRichStringCellValue().toString().trim()).getResultList();
                 if (results.size() == 0) {
                     OpCenter opCenter = new OpCenter();
-                    opCenter.setName(cellE.getRichStringCellValue().toString());
+                    opCenter.setName(cellE.getRichStringCellValue().toString().trim());
                     opCenter.persist();
-                    target.setOpCenter(opCenter);
+                    pursuit.setOpCenter(opCenter);
                 } else if (results.size() == 1) {
-                    target.setOpCenter((OpCenter) results.get(0));
+                    pursuit.setOpCenter((OpCenter) results.get(0));
                 } else {
                     log.error("Database error");
                 }
             }
             HSSFCell cellF = cells.next();
             if (cellF.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                List<Command> results = Command.findCommandsByNameEquals(cellF.getRichStringCellValue().toString()).getResultList();
+                List<Command> results = Command.findCommandsByNameEquals(cellF.getRichStringCellValue().toString().trim()).getResultList();
                 if (results.size() == 0) {
                     Command command = new Command();
-                    command.setName(cellF.getRichStringCellValue().toString());
+                    command.setName(cellF.getRichStringCellValue().toString().trim());
                     command.persist();
-                    target.setCommand(command);
+                    rfp.setCommand(command);
                 } else if (results.size() == 1) {
-                    target.setCommand((Command) results.get(0));
+                    rfp.setCommand((Command) results.get(0));
                 } else {
                     log.error("Database error");
                 }
             }
             HSSFCell cellG = cells.next();
             if (cellG.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                target.setContractEffort(cellG.getRichStringCellValue().toString());
+                rfp.setContractEffort(cellG.getRichStringCellValue().toString().trim());
             }
             HSSFCell cellH = cells.next();
             if (cellH.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                target.setRfpNumber(cellH.getRichStringCellValue().toString());
+                rfp.setRfpNumber(cellH.getRichStringCellValue().toString().trim());
             }
             HSSFCell cellI = cells.next();
             if (cellI.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                target.setCodeName(cellI.getRichStringCellValue().toString());
+                pursuit.setCodeName(cellI.getRichStringCellValue().toString().trim());
             }
             HSSFCell cellJ = cells.next();
             if (cellJ.getCellType() == HSSFCell.CELL_TYPE_STRING) {
@@ -184,9 +191,9 @@ public class DocumentController {
                         person.setFirstName(first);
                         person.setLastName(last);
                         person.persist();
-                        target.setCaptureManager(person);
+                        pursuit.setCaptureManager(person);
                     } else if (results.size() == 1) {
-                        target.setCaptureManager((Person) results.get(0));
+                    	pursuit.setCaptureManager((Person) results.get(0));
                     } else {
                         log.error("Database error");
                     }
@@ -194,60 +201,60 @@ public class DocumentController {
             }
             HSSFCell cellK = cells.next();
             if (cellK.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                target.setPursuitRole((PursuitRole) PursuitRole.findPursuitRolesByCodeEquals(cellK.getRichStringCellValue().toString()).getSingleResult());
+            	pursuit.setPursuitRole((PursuitRole) PursuitRole.findPursuitRolesByCodeEquals(cellK.getRichStringCellValue().toString().trim()).getSingleResult());
             }
             HSSFCell cellL = cells.next();
             if (cellL.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                List<Company> results = Company.findCompanysByNameEquals(cellL.getRichStringCellValue().toString()).getResultList();
+                List<Company> results = Company.findCompanysByNameEquals(cellL.getRichStringCellValue().toString().trim()).getResultList();
                 if (results.size() == 0) {
                     Company company = new Company();
                     company.setName(cellL.getRichStringCellValue().toString());
                     company.persist();
-                    target.setPrimeCompany(company);
+                    pursuit.setPrimeCompany(company);
                 } else if (results.size() == 1) {
-                    target.setPrimeCompany((Company) results.get(0));
+                	pursuit.setPrimeCompany((Company) results.get(0));
                 } else {
                     log.error("Database error");
                 }
             }
             HSSFCell cellM = cells.next();
             if (cellM.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-                target.setProcurementValue((float) cellM.getNumericCellValue());
+            	pursuit.setProcurementValue((float) cellM.getNumericCellValue());
             } else if (cellM.getCellType() == HSSFCell.CELL_TYPE_STRING) {
             }
             HSSFCell cellN = cells.next();
             if (cellN.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-                target.setBuValue((float) cellN.getNumericCellValue());
+            	pursuit.setBuValue((float) cellN.getNumericCellValue());
             } else if (cellN.getCellType() == HSSFCell.CELL_TYPE_STRING) {
             }
             HSSFCell cellO = cells.next();
             if (cellO.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                if (!cellO.getRichStringCellValue().toString().equals(null) && !cellO.getRichStringCellValue().toString().equals("")) {
-                    target.setProcurementType((ProcurementType) ProcurementType.findProcurementTypesByCodeEquals(cellO.getRichStringCellValue().toString()).getSingleResult());
+                if (!cellO.getRichStringCellValue().toString().trim().equals(null) && !cellO.getRichStringCellValue().toString().trim().equals("")) {
+                    rfp.setProcurementType((ProcurementType) ProcurementType.findProcurementTypesByCodeEquals(cellO.getRichStringCellValue().toString()).getSingleResult());
                 }
             }
             HSSFCell cellP = cells.next();
             if (cellP.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                if (!cellP.getRichStringCellValue().toString().equals(null) && !cellP.getRichStringCellValue().toString().equals("")) {
-                    target.setNewBusiness((NewBusiness) NewBusiness.findNewBusinessesByNameLike(cellP.getRichStringCellValue().toString()).getSingleResult());
+                if (!cellP.getRichStringCellValue().toString().trim().equals(null) && !cellP.getRichStringCellValue().toString().trim().equals("")) {
+                    pursuit.setNewBusiness((NewBusiness) NewBusiness.findNewBusinessesByNameLike(cellP.getRichStringCellValue().toString().trim()).getSingleResult());
                 }
             }
             HSSFCell cellQ = cells.next();
             if (cellQ.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
                 if (HSSFDateUtil.isCellDateFormatted(cellQ)) {
-                    target.setRfpDate(cellQ.getDateCellValue());
+                    rfp.setRfpIssueDate(cellQ.getDateCellValue());
                 }
             }
             HSSFCell cellR = cells.next();
             if (cellR.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
                 if (HSSFDateUtil.isCellDateFormatted(cellR)) {
-                    target.setSubmittalDate(cellR.getDateCellValue());
+                    rfp.setSubmittalDate(cellR.getDateCellValue());
                 }
             }
             HSSFCell cellS = cells.next();
             if (cellS.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
                 if (HSSFDateUtil.isCellDateFormatted(cellS)) {
-                    target.setAwardDate(cellS.getDateCellValue());
+                    award.setAwardDate(cellS.getDateCellValue());
                 }
             }
             HSSFCell cellT = cells.next();
@@ -283,7 +290,7 @@ public class DocumentController {
                             log.error("Database error");
                         }
                     }
-                    target.setIncumbant(companys);
+                    rfp.setIncumbents(companys);
                 }
             }
             HSSFCell cellU = cells.next();
@@ -308,36 +315,73 @@ public class DocumentController {
                         person.setFirstName(first);
                         person.setLastName(last);
                         person.persist();
-                        target.setContractRep(person);
+                        pursuit.setContractsRep(person);
                     } else if (results.size() == 1) {
-                        target.setContractRep((Person) results.get(0));
+                        pursuit.setContractsRep((Person) results.get(0));
                     } else {
                         log.error("Database error");
                     }
                 } else {
-                    target.setComments(cellU.getRichStringCellValue().toString());
+                    rfp.setComments(cellU.getRichStringCellValue().toString().trim());
                 }
             }
             HSSFCell cellV = cells.next();
-            if (cellV.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-                List<Company> results = Company.findCompanysByNameEquals(cellV.getRichStringCellValue().toString()).getResultList();
-                if (results.size() == 0) {
-                    Company company = new Company();
-                    company.setName(cellV.getRichStringCellValue().toString());
-                    company.persist();
-                    target.setWinningCompany(company);
-                } else if (results.size() == 1) {
-                    target.setWinningCompany((Company) results.get(0));
-                } else {
-                    log.error("Database error");
-                }
+            if(!cellV.getRichStringCellValue().toString().trim().equals("")) {
+	            if (cellV.getCellType() == HSSFCell.CELL_TYPE_STRING) {
+	                List<Company> results = Company.findCompanysByNameEquals(cellV.getRichStringCellValue().toString().trim()).getResultList();
+	                if (results.size() == 0) {
+	                    Company company = new Company();
+	                    company.setName(cellV.getRichStringCellValue().toString().trim());
+	                    company.persist();
+	                    award.setWinner(company);
+	                } else if (results.size() == 1) {
+	                    award.setWinner((Company) results.get(0));
+	                } else {
+	                    log.error("Database error");
+	                }
+	            }
             }
             HSSFCell cellW = cells.next();
             if (cellW.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-                target.setWinningBid((float) cellW.getNumericCellValue());
+                award.setWinningBid((float) cellW.getNumericCellValue());
             } else if (cellW.getCellType() == HSSFCell.CELL_TYPE_STRING) {
             }
-            target.persist();
+            
+                    
+            
+            //  Need a method to join these all together.
+            if (targetNumber!=previousTargetNumber) {
+            	// New record            	
+            	previousTargetNumber = targetNumber;
+            	
+            }
+            else {
+            	// Get existing rfp record
+            	List<RFP> results = RFP.findRFPSByTargetNumber(targetNumber).getResultList();
+            	if (results.size() == 0) {
+            		log.error("Should have been a RFP record for: "+ targetNumber);
+            	}
+            	else if (results.size() == 1){
+            		RFP prevRFP = (RFP) results.get(0);
+            		rfp = prevRFP;
+            	}
+            	else {
+            		log.error("Too many records returned for: " +targetNumber);
+            	}
+            }
+            List<Award> awards = rfp.getAwards();
+            award.setRfp(rfp);
+        	awards.add(award);
+        	rfp.setAwards(awards);
+        	List<Pursuit> pursuits = rfp.getPursuits();
+        	pursuit.setRfp(rfp);
+        	pursuits.add(pursuit);
+        	rfp.setPursuits(pursuits);
+            //pursuit.persist();
+            //award.persist();
+        	rfp.persist();
+            
+            
         }
         return "redirect:/documents?page=1&size=10" + encodeUrlPathSegment(document.getId().toString(), request);
     }
