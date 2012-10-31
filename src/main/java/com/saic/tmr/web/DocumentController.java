@@ -7,6 +7,8 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -241,21 +243,46 @@ public class DocumentController {
             }
             HSSFCell cellQ = cells.next();
             if (cellQ.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-                if (HSSFDateUtil.isCellDateFormatted(cellQ)) {
-                    rfp.setRfpIssueDate(cellQ.getDateCellValue());
-                }
+            	double value = cellQ.getNumericCellValue();
+				if(HSSFDateUtil.isValidExcelDate(value))
+				{
+					Date date = HSSFDateUtil.getJavaDate(value);
+					rfp.setRfpIssueDate(date);								
+				}
+				else
+				{
+					log.error("Invalid Date value found at row number " +
+							row.getRowNum()+" and column number "+cellQ.getCellNum());	
+				}    			
             }
+            
             HSSFCell cellR = cells.next();
             if (cellR.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-                if (HSSFDateUtil.isCellDateFormatted(cellR)) {
-                    rfp.setSubmittalDate(cellR.getDateCellValue());
-                }
+            	double value = cellQ.getNumericCellValue();
+				if(HSSFDateUtil.isValidExcelDate(value))
+				{
+					Date date = HSSFDateUtil.getJavaDate(value);
+					rfp.setSubmittalDate(date);								
+				}
+				else
+				{
+					log.error("Invalid Date value found at row number " +
+							row.getRowNum()+" and column number "+cellQ.getCellNum());	
+				}
             }
             HSSFCell cellS = cells.next();
             if (cellS.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-                if (HSSFDateUtil.isCellDateFormatted(cellS)) {
-                    award.setAwardDate(cellS.getDateCellValue());
-                }
+            	double value = cellQ.getNumericCellValue();
+				if(HSSFDateUtil.isValidExcelDate(value))
+				{
+					Date date = HSSFDateUtil.getJavaDate(value);
+					award.setAwardDate(date);								
+				}
+				else
+				{
+					log.error("Invalid Date value found at row number " +
+							row.getRowNum()+" and column number "+cellQ.getCellNum());	
+				}
             }
             HSSFCell cellT = cells.next();
             if (cellT.getCellType() == HSSFCell.CELL_TYPE_STRING) {
@@ -341,10 +368,12 @@ public class DocumentController {
 	                }
 	            }
             }
-            HSSFCell cellW = cells.next();
-            if (cellW.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-                award.setWinningBid((float) cellW.getNumericCellValue());
-            } else if (cellW.getCellType() == HSSFCell.CELL_TYPE_STRING) {
+            if(cells.hasNext()) {
+            	HSSFCell cellW = cells.next();
+	            if (cellW.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
+	                award.setWinningBid((float) cellW.getNumericCellValue());
+	            } else if (cellW.getCellType() == HSSFCell.CELL_TYPE_STRING) {
+	            }
             }
             
                     
@@ -369,14 +398,20 @@ public class DocumentController {
             		log.error("Too many records returned for: " +targetNumber);
             	}
             }
-            List<Award> awards = rfp.getAwards();
-            award.setRfp(rfp);
-        	awards.add(award);
-        	rfp.setAwards(awards);
-        	List<Pursuit> pursuits = rfp.getPursuits();
-        	pursuit.setRfp(rfp);
-        	pursuits.add(pursuit);
-        	rfp.setPursuits(pursuits);
+            if(!cellV.getRichStringCellValue().toString().trim().equals("")) { //Winner is not empty
+            	List<Award> awards = rfp.getAwards();
+                award.setRfp(rfp);
+            	awards.add(award);
+            	rfp.setAwards(awards);
+        		log.info("Adding award");
+            }
+        	if(!cellD.getRichStringCellValue().toString().trim().equals("")) { //BU is not empty
+        		List<Pursuit> pursuits = rfp.getPursuits();
+        		pursuit.setRfp(rfp);
+        		pursuits.add(pursuit);
+        		rfp.setPursuits(pursuits);
+        		log.info("Adding pursuit");
+        	}
             //pursuit.persist();
             //award.persist();
         	rfp.persist();
