@@ -5,6 +5,7 @@
     <page:list id="pl_com_saic_tmr_domain_ContractType" items="${contracttypes}" z="h7ohqvDnY0r1STszvwTbwqISUT4=">
         <table:table data="${contracttypes}" id="l_com_saic_tmr_domain_ContractType" path="/contracttypes" z="K9C6Gidx63haruraLnoO/n3gbVk=">
             <table:column id="c_com_saic_tmr_domain_ContractType_name" property="name" z="RRdC4hlipM7Tr5MoYiWran2RSJs="/>
+            <table:column id="c_com_saic_tmr_domain_ContractType_code" property="code" z="8P2X2aM93WVtM28WZn3aFH+XBJc="/>
         </table:table>
     </page:list>
 </div>

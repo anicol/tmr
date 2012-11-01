@@ -4,5 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_saic_tmr_domain_ContractType" object="${contracttype}" path="/contracttypes" z="kE1kt4PSCrn9DZGUrUELMi31onU=">
         <field:display field="name" id="s_com_saic_tmr_domain_ContractType_name" object="${contracttype}" z="80bAKt/SYD2pY2w2dU1w9e/oANU="/>
+        <field:display field="code" id="s_com_saic_tmr_domain_ContractType_code" object="${contracttype}" z="Cq6BMpvm5fs7IhMTnatO8DYqNiQ="/>
     </page:show>
 </div>

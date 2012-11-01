@@ -11,6 +11,9 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJpaActiveRecord
 public class ContractType {
 
+	@NotNull
+	private String code;
+	
     @NotNull
     @Size(min = 2)
     private String name;

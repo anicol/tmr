@@ -7,6 +7,14 @@ import com.saic.tmr.domain.ContractType;
 
 privileged aspect ContractType_Roo_JavaBean {
     
+    public String ContractType.getCode() {
+        return this.code;
+    }
+    
+    public void ContractType.setCode(String code) {
+        this.code = code;
+    }
+    
     public String ContractType.getName() {
         return this.name;
     }

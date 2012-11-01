@@ -24,8 +24,14 @@ privileged aspect ContractTypeDataOnDemand_Roo_DataOnDemand {
     
     public ContractType ContractTypeDataOnDemand.getNewTransientContractType(int index) {
         ContractType obj = new ContractType();
+        setCode(obj, index);
         setName(obj, index);
         return obj;
+    }
+    
+    public void ContractTypeDataOnDemand.setCode(ContractType obj, int index) {
+        String code = "code_" + index;
+        obj.setCode(code);
     }
     
     public void ContractTypeDataOnDemand.setName(ContractType obj, int index) {

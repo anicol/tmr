@@ -4,6 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_saic_tmr_domain_ContractType" modelAttribute="contractType" path="/contracttypes" render="${empty dependencies}" z="0PhykLj0mpJwEGqxS74992Z/zpg=">
         <field:input field="name" id="c_com_saic_tmr_domain_ContractType_name" min="2" required="true" z="7DS7kw490ThK3+bcvJBL0MYgSMs="/>
+        <field:input field="code" id="c_com_saic_tmr_domain_ContractType_code" required="true" z="ElRESJs53ATpMKpKfKfvgAOIuVk="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_saic_tmr_domain_ContractType" render="${not empty dependencies}" z="Hiv5T6kiRHlXy8ZccMAGtH5sqmA="/>
 </div>

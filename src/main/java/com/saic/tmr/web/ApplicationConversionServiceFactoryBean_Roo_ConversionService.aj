@@ -124,7 +124,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<ContractType, String> ApplicationConversionServiceFactoryBean.getContractTypeToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.ContractType, java.lang.String>() {
             public String convert(ContractType contractType) {
-                return new StringBuilder().append(contractType.getName()).toString();
+                return new StringBuilder().append(contractType.getCode()).append(' ').append(contractType.getName()).toString();
             }
         };
     }
