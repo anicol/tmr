@@ -16,7 +16,6 @@ import com.saic.tmr.domain.Pursuit;
 import com.saic.tmr.domain.PursuitRole;
 import com.saic.tmr.domain.PursuitStatus;
 import com.saic.tmr.domain.RFP;
-import com.saic.tmr.domain.Target;
 import com.saic.tmr.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -338,30 +337,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Target, String> ApplicationConversionServiceFactoryBean.getTargetToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.saic.tmr.domain.Target, java.lang.String>() {
-            public String convert(Target target) {
-                return new StringBuilder().append(target.getTargetNumber()).append(' ').append(target.getTracCrmNumber()).append(' ').append(target.getContractEffort()).append(' ').append(target.getRfpNumber()).toString();
-            }
-        };
-    }
-    
-    public Converter<Long, Target> ApplicationConversionServiceFactoryBean.getIdToTargetConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.saic.tmr.domain.Target>() {
-            public com.saic.tmr.domain.Target convert(java.lang.Long id) {
-                return Target.findTarget(id);
-            }
-        };
-    }
-    
-    public Converter<String, Target> ApplicationConversionServiceFactoryBean.getStringToTargetConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.saic.tmr.domain.Target>() {
-            public com.saic.tmr.domain.Target convert(String id) {
-                return getObject().convert(getObject().convert(id, Long.class), Target.class);
-            }
-        };
-    }
-    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getAwardToStringConverter());
         registry.addConverter(getIdToAwardConverter());
@@ -402,9 +377,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getRFPToStringConverter());
         registry.addConverter(getIdToRFPConverter());
         registry.addConverter(getStringToRFPConverter());
-        registry.addConverter(getTargetToStringConverter());
-        registry.addConverter(getIdToTargetConverter());
-        registry.addConverter(getStringToTargetConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

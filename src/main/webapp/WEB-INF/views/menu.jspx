@@ -3,11 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_target" z="d8AXoL/x4tzK61wG798RIUtPSv8=">
-            <menu:item id="i_target_new" messageCode="global_menu_new" url="/targets?form" z="EdeT5se2kx6dkEokeso17LOXSEs="/>
-            <menu:item id="i_target_list" messageCode="global_menu_list" url="/targets?page=1&amp;size=${empty param.size ? 10 : param.size}" z="VVLOk9g2l5R0eE+rPk9EAAMPSew="/>
-        </menu:category>
-         <menu:category id="c_rfp" z="Yankddui71EDg8kDP7xJzY+oNJg=">
+        <menu:category id="c_rfp" z="Yankddui71EDg8kDP7xJzY+oNJg=">
             <menu:item id="i_rfp_new" messageCode="global_menu_new" url="/rfps?form" z="RnmRrnIBODBvZPNdu03Ih6r594g="/>
             <menu:item id="i_rfp_list" messageCode="global_menu_list" url="/rfps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="16diuVLVQzIlI+vHNj0DCInfp4s="/>
         </menu:category>
@@ -19,10 +15,12 @@
             <menu:item id="i_award_new" messageCode="global_menu_new" url="/awards?form" z="mDrJ5d7kEB77nWLtC7A26mqtfyA="/>
             <menu:item id="i_award_list" messageCode="global_menu_list" url="/awards?page=1&amp;size=${empty param.size ? 10 : param.size}" z="8raM6aqzLqDxSBJXxAgQymQ+ay4="/>
         </menu:category>
+        <br />
         <menu:category id="c_document" label="Import" z="xNUzPCXIt030pm5Tb5+4Q77DJ08=">
             <menu:item id="i_document_new" label="Import" messageCode="global_menu_new" url="/documents?form" z="Ta2fSZ17SgWV/ncYDbjDvUyqkxs="/>
             <menu:item id="i_document_list" messageCode="global_menu_list" url="/documents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="p196XK4gvGXOnIrUwDqNS/p7fzE="/>
         </menu:category>
+        <br />
         <menu:category id="c_newbusiness" z="BlQlCzCSR+iTYm+oghNwtpb4Ht0=">
             <menu:item id="i_newbusiness_new" messageCode="global_menu_new" url="/newbusinesses?form" z="TdLhRdm/yPWkte6XR/ihkdJE1HQ="/>
             <menu:item id="i_newbusiness_list" messageCode="global_menu_list" url="/newbusinesses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="vsgPPSDppxC2AbUrCW4heVfgmps="/>
