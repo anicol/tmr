@@ -25,7 +25,7 @@ privileged aspect PursuitRole_Roo_Jpa_ActiveRecord {
     }
     
     public static List<PursuitRole> PursuitRole.findAllPursuitRoles() {
-        return entityManager().createQuery("SELECT o FROM PursuitRole o", PursuitRole.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM PursuitRole o order by name", PursuitRole.class).getResultList();
     }
     
     public static PursuitRole PursuitRole.findPursuitRole(Long id) {

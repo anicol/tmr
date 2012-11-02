@@ -10,13 +10,13 @@
         <field:select field="captureManager" id="c_com_saic_tmr_domain_Pursuit_captureManager" itemValue="id" items="${people}" path="/people" z="SYsSHCf9t24Qhnwq1SYEdvd7DbM="/>
         <field:select field="contractsRep" id="c_com_saic_tmr_domain_Pursuit_contractsRep" itemValue="id" items="${people}" path="/people" z="+LNX+lwpUVoNMokWbZIe44qKKYM="/>
         <field:select field="subcontractsAdmin" id="c_com_saic_tmr_domain_Pursuit_subcontractsAdmin" itemValue="id" items="${people}" path="/people" z="lMzl8oblRV+6cCEId444tXqOqMs="/>
-        <field:select field="pursuitRole" id="c_com_saic_tmr_domain_Pursuit_pursuitRole" itemValue="id" items="${pursuitroles}" path="/pursuitroles" z="d0uKVM55vkvfAs/vr40YmVX6oJ8="/>
+        <field:select field="pursuitRole" id="c_com_saic_tmr_domain_Pursuit_pursuitRole" itemLabel="name" itemValue="id" items="${pursuitroles}" path="/pursuitroles" z="d0uKVM55vkvfAs/vr40YmVX6oJ8="/>
         <field:select field="primeCompany" id="c_com_saic_tmr_domain_Pursuit_primeCompany" itemValue="id" items="${companys}" path="/companys" z="ctrJEmPejiKIdeeqOcLyhJk66To="/>
         <field:input field="procurementValue" id="c_com_saic_tmr_domain_Pursuit_procurementValue" validationMessageCode="field_invalid_number" z="BSWA8ad2W6zZ9vdFxS2zRTKGJOM="/>
         <field:input field="buValue" id="c_com_saic_tmr_domain_Pursuit_buValue" validationMessageCode="field_invalid_number" z="wAZcF+ItZ5OdxppGiClh02hZJNw="/>
         <field:select field="newBusiness" id="c_com_saic_tmr_domain_Pursuit_newBusiness" itemValue="id" items="${newbusinesses}" path="/newbusinesses" z="N5a4EdACKfL3puZzqTR/NKf0/jg="/>
         <field:checkbox field="oci" id="c_com_saic_tmr_domain_Pursuit_oci" z="5L2GNiEi1d/39Q8lG/+6ZR1cO5c="/>
         <field:input field="comments" id="c_com_saic_tmr_domain_Pursuit_comments" z="YQXD3l0CG3XDcHaPKYDh5Cz1qwY="/>
-        <field:select field="rfp" id="c_com_saic_tmr_domain_Pursuit_rfp" itemValue="id" items="${rfps}" path="/rfps" z="4JOuOzVU+nv7EChgwPyYwFAn9YE="/>
+        <field:select field="rfp" id="c_com_saic_tmr_domain_Pursuit_rfp" itemValue="id" itemLabel="contractEffort" items="${rfps}" path="/rfps" z="4JOuOzVU+nv7EChgwPyYwFAn9YE="/>
     </form:update>
 </div>

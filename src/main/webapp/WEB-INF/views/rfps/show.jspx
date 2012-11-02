@@ -4,13 +4,13 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_saic_tmr_domain_RFP" object="${rfp_}" path="/rfps" z="nUveAL0DAAfFypXRfIsXI30bUqs=">
         <field:display field="targetNumber" id="s_com_saic_tmr_domain_RFP_targetNumber" object="${rfp_}" z="NSeP7LtzBJoc9km2z1cG7eufax8="/>
-        <field:display field="pursuitStatus" id="s_com_saic_tmr_domain_RFP_pursuitStatus" object="${rfp_}" z="1A0Rrfe5l/iBPXuBNylND1TV0hM="/>
+        <field:display field="pursuitStatus" label="name" id="s_com_saic_tmr_domain_RFP_pursuitStatus" object="${rfp_}" z="1A0Rrfe5l/iBPXuBNylND1TV0hM="/>
         <field:display field="command" id="s_com_saic_tmr_domain_RFP_command" object="${rfp_}" z="cEELhGcfYfkL4UaW8/N136WZvoc="/>
         <field:display field="contractEffort" id="s_com_saic_tmr_domain_RFP_contractEffort" object="${rfp_}" z="hk7bM1CPForaxIUb5zMA6WJSLbg="/>
         <field:display field="rfpNumber" id="s_com_saic_tmr_domain_RFP_rfpNumber" object="${rfp_}" z="A/iAntQC10W/Y+UPATwOLfPiBLQ="/>
-        <field:display field="procurementType" id="s_com_saic_tmr_domain_RFP_procurementType" object="${rfp_}" z="DI4La6aewr2tdgKEZFm/OeIBFVY="/>
+        <field:display field="procurementType" label="Proc. Type" id="s_com_saic_tmr_domain_RFP_procurementType" object="${rfp_}" z="DI4La6aewr2tdgKEZFm/OeIBFVY="/>
         <field:display field="contractType" id="s_com_saic_tmr_domain_RFP_contractType" object="${rfp_}" z="iEKbSpWNGyhX89BWBkoKcfFeirc="/>
-        <field:display date="true" dateTimePattern="${RFP__advancenoticeenddate_date_format}" field="advanceNoticeEndDate" id="s_com_saic_tmr_domain_RFP_advanceNoticeEndDate" object="${rfp_}" z="l+wwPTsiSJ6q7d9orTeh7zdKtiI="/>
+        <field:display date="true" label="Adv Notice Date" dateTimePattern="${RFP__advancenoticeenddate_date_format}" field="advanceNoticeEndDate" id="s_com_saic_tmr_domain_RFP_advanceNoticeEndDate" object="${rfp_}" z="l+wwPTsiSJ6q7d9orTeh7zdKtiI="/>
         <field:display date="true" dateTimePattern="${RFP__rfpissuedate_date_format}" field="rfpIssueDate" id="s_com_saic_tmr_domain_RFP_rfpIssueDate" object="${rfp_}" z="a7qeiTZ5PocAbPSxA3Fd99vRiDM="/>
         <field:display field="incumbents" id="s_com_saic_tmr_domain_RFP_incumbents" object="${rfp_}" z="UJCzdsoxsSSgDja4el161QMX42o="/>
         <field:display date="true" dateTimePattern="${RFP__submittaldate_date_format}" field="submittalDate" id="s_com_saic_tmr_domain_RFP_submittalDate" object="${rfp_}" z="1iJlthCdpmwEYl3qLc7oMlGIrKE="/>

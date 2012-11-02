@@ -25,7 +25,7 @@ privileged aspect Company_Roo_Jpa_ActiveRecord {
     }
     
     public static List<Company> Company.findAllCompanys() {
-        return entityManager().createQuery("SELECT o FROM Company o", Company.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM Company o order by name", Company.class).getResultList();
     }
     
     public static Company Company.findCompany(Long id) {

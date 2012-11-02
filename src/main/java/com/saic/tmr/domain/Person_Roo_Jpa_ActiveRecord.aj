@@ -25,7 +25,7 @@ privileged aspect Person_Roo_Jpa_ActiveRecord {
     }
     
     public static List<Person> Person.findAllPeople() {
-        return entityManager().createQuery("SELECT o FROM Person o", Person.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM Person o order by lastName, firstName", Person.class).getResultList();
     }
     
     public static Person Person.findPerson(Long id) {

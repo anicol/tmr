@@ -25,7 +25,7 @@ privileged aspect NewBusiness_Roo_Jpa_ActiveRecord {
     }
     
     public static List<NewBusiness> NewBusiness.findAllNewBusinesses() {
-        return entityManager().createQuery("SELECT o FROM NewBusiness o order by name", NewBusiness.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM NewBusiness o", NewBusiness.class).getResultList();
     }
     
     public static NewBusiness NewBusiness.findNewBusiness(Long id) {

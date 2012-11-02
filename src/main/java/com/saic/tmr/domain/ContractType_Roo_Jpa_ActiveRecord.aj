@@ -25,7 +25,7 @@ privileged aspect ContractType_Roo_Jpa_ActiveRecord {
     }
     
     public static List<ContractType> ContractType.findAllContractTypes() {
-        return entityManager().createQuery("SELECT o FROM ContractType o", ContractType.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM ContractType o order by name", ContractType.class).getResultList();
     }
     
     public static ContractType ContractType.findContractType(Long id) {

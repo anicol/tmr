@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>-->
     <form:create id="fc_com_saic_tmr_domain_RFP" modelAttribute="RFP_" path="/rfps" render="${empty dependencies}" z="tqCcm86fj5LqbsKd6w+B3BfKAfU=">
         <field:input field="targetNumber" id="c_com_saic_tmr_domain_RFP_targetNumber" z="8ogv6HVPqe868g9x4uzPCjVAF84="/>
-        <field:select field="pursuitStatus" id="c_com_saic_tmr_domain_RFP_pursuitStatus" itemValue="id" items="${pursuitstatuses}" path="/pursuitstatuses" z="xfvytpemkzOg6i3WpyTT3pIV3M0="/>
+        <field:select field="pursuitStatus" id="c_com_saic_tmr_domain_RFP_pursuitStatus" itemValue="id" itemLabel="name" items="${pursuitstatuses}" path="/pursuitstatuses" z="xfvytpemkzOg6i3WpyTT3pIV3M0="/>
         <field:select field="command" id="c_com_saic_tmr_domain_RFP_command" itemValue="id" items="${commands}" path="/commands" z="lZl5G8oHQJz/jjMCuRlTn7vcIrw="/>
         <field:input field="contractEffort" id="c_com_saic_tmr_domain_RFP_contractEffort" min="2" required="true" z="rD+KA4ouFTYFl76Q4nkkwX2TYeM="/>
         <field:input field="rfpNumber" id="c_com_saic_tmr_domain_RFP_rfpNumber" z="S/YKZcPIEJMYOJzywU9+bU/qKpE="/>
-        <field:select field="procurementType" id="c_com_saic_tmr_domain_RFP_procurementType" itemValue="id" items="${procurementtypes}" path="/procurementtypes" z="lSjZ7V/aS67DZMbvGwtuQXtVHts="/>
-        <field:select field="contractType" id="c_com_saic_tmr_domain_RFP_contractType" itemValue="id" items="${contracttypes}" path="/contracttypes" z="eQc7sa/r9ntfEjIrojtM1X3wMec="/>
+        <field:select field="procurementType" id="c_com_saic_tmr_domain_RFP_procurementType" itemLabel="name" itemValue="id" items="${procurementtypes}" path="/procurementtypes" z="lSjZ7V/aS67DZMbvGwtuQXtVHts="/>
+        <field:select field="contractType" id="c_com_saic_tmr_domain_RFP_contractType" itemLabel="name" itemValue="id" items="${contracttypes}" path="/contracttypes" z="eQc7sa/r9ntfEjIrojtM1X3wMec="/>
         <field:datetime dateTimePattern="${RFP__advancenoticeenddate_date_format}" field="advanceNoticeEndDate" id="c_com_saic_tmr_domain_RFP_advanceNoticeEndDate" z="5v7+wzO6QJX0Q9RkjTMFNGz48F4="/>
         <field:datetime dateTimePattern="${RFP__rfpissuedate_date_format}" field="rfpIssueDate" id="c_com_saic_tmr_domain_RFP_rfpIssueDate" z="pStCY2DxYQnyZgxl5WJzNTJWZ7M="/>
         <field:select field="incumbents" id="c_com_saic_tmr_domain_RFP_incumbents" itemValue="id" items="${companys}" multiple="true" path="/companys" z="Nn+AmvQEucgFo24ISaxBEJkuz6A="/>

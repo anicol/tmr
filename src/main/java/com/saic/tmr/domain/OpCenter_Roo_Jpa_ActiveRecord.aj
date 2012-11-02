@@ -25,7 +25,7 @@ privileged aspect OpCenter_Roo_Jpa_ActiveRecord {
     }
     
     public static List<OpCenter> OpCenter.findAllOpCenters() {
-        return entityManager().createQuery("SELECT o FROM OpCenter o", OpCenter.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM OpCenter o order by name", OpCenter.class).getResultList();
     }
     
     public static OpCenter OpCenter.findOpCenter(Long id) {

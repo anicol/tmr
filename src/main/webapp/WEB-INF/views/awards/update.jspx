@@ -6,6 +6,6 @@
         <field:select field="Winner" id="c_com_saic_tmr_domain_Award_Winner" itemValue="id" items="${companys}" path="/companys" z="Z08M09deyFHJNfynz3RBDnJ6bn0="/>
         <field:datetime dateTimePattern="${award_awarddate_date_format}" field="awardDate" id="c_com_saic_tmr_domain_Award_awardDate" z="lmRFsB5n/0Q4AuidmBa1KQ2xVtk="/>
         <field:input field="winningBid" id="c_com_saic_tmr_domain_Award_winningBid" validationMessageCode="field_invalid_number" z="5zokM6b0S0fm8hQOasz259+3Vrw="/>
-        <field:select field="rfp" id="c_com_saic_tmr_domain_Award_rfp" itemValue="id" items="${rfps}" path="/rfps" z="42FveP18pxB5352yTWS1NKUTy6s="/>
+        <field:select field="rfp" id="c_com_saic_tmr_domain_Award_rfp" itemValue="id" itemLabel="contractEffort" items="${rfps}" path="/rfps" z="42FveP18pxB5352yTWS1NKUTy6s="/>
     </form:update>
 </div>

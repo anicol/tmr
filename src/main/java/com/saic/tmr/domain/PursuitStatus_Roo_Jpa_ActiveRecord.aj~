@@ -3,73 +3,73 @@
 
 package com.saic.tmr.domain;
 
-import com.saic.tmr.domain.NewBusiness;
+import com.saic.tmr.domain.PursuitStatus;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.springframework.transaction.annotation.Transactional;
 
-privileged aspect NewBusiness_Roo_Jpa_ActiveRecord {
+privileged aspect PursuitStatus_Roo_Jpa_ActiveRecord {
     
     @PersistenceContext
-    transient EntityManager NewBusiness.entityManager;
+    transient EntityManager PursuitStatus.entityManager;
     
-    public static final EntityManager NewBusiness.entityManager() {
-        EntityManager em = new NewBusiness().entityManager;
+    public static final EntityManager PursuitStatus.entityManager() {
+        EntityManager em = new PursuitStatus().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
         return em;
     }
     
-    public static long NewBusiness.countNewBusinesses() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM NewBusiness o", Long.class).getSingleResult();
+    public static long PursuitStatus.countPursuitStatuses() {
+        return entityManager().createQuery("SELECT COUNT(o) FROM PursuitStatus o", Long.class).getSingleResult();
     }
     
-    public static List<NewBusiness> NewBusiness.findAllNewBusinesses() {
-        return entityManager().createQuery("SELECT o FROM NewBusiness o order by name", NewBusiness.class).getResultList();
+    public static List<PursuitStatus> PursuitStatus.findAllPursuitStatuses() {
+        return entityManager().createQuery("SELECT o FROM PursuitStatus o", PursuitStatus.class).getResultList();
     }
     
-    public static NewBusiness NewBusiness.findNewBusiness(Long id) {
+    public static PursuitStatus PursuitStatus.findPursuitStatus(Long id) {
         if (id == null) return null;
-        return entityManager().find(NewBusiness.class, id);
+        return entityManager().find(PursuitStatus.class, id);
     }
     
-    public static List<NewBusiness> NewBusiness.findNewBusinessEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM NewBusiness o", NewBusiness.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    public static List<PursuitStatus> PursuitStatus.findPursuitStatusEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("SELECT o FROM PursuitStatus o", PursuitStatus.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional
-    public void NewBusiness.persist() {
+    public void PursuitStatus.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);
     }
     
     @Transactional
-    public void NewBusiness.remove() {
+    public void PursuitStatus.remove() {
         if (this.entityManager == null) this.entityManager = entityManager();
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            NewBusiness attached = NewBusiness.findNewBusiness(this.id);
+            PursuitStatus attached = PursuitStatus.findPursuitStatus(this.id);
             this.entityManager.remove(attached);
         }
     }
     
     @Transactional
-    public void NewBusiness.flush() {
+    public void PursuitStatus.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();
     }
     
     @Transactional
-    public void NewBusiness.clear() {
+    public void PursuitStatus.clear() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.clear();
     }
     
     @Transactional
-    public NewBusiness NewBusiness.merge() {
+    public PursuitStatus PursuitStatus.merge() {
         if (this.entityManager == null) this.entityManager = entityManager();
-        NewBusiness merged = this.entityManager.merge(this);
+        PursuitStatus merged = this.entityManager.merge(this);
         this.entityManager.flush();
         return merged;
     }

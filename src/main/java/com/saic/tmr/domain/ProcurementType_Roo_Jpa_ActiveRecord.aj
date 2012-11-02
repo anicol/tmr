@@ -25,7 +25,7 @@ privileged aspect ProcurementType_Roo_Jpa_ActiveRecord {
     }
     
     public static List<ProcurementType> ProcurementType.findAllProcurementTypes() {
-        return entityManager().createQuery("SELECT o FROM ProcurementType o", ProcurementType.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM ProcurementType o order by name", ProcurementType.class).getResultList();
     }
     
     public static ProcurementType ProcurementType.findProcurementType(Long id) {
