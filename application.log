@@ -1,0 +1,196 @@
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46889]
+DEBUG http-8080-2 org.hibernate.loader.Loader - loading entity: [com.saic.tmr.domain.Command#2]
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+DEBUG http-8080-2 org.hibernate.SQL - select command0_.id as id10_0_, command0_.name as name10_0_, command0_.version as version10_0_ from command command0_ where command0_.id=?
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.loader.Loader - result row: EntityKey[com.saic.tmr.domain.Command#2]
+DEBUG http-8080-2 org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.saic.tmr.domain.Command': PersistenceElement for transient javax.persistence.EntityManager com.saic.tmr.domain.Command.entityManager
+DEBUG http-8080-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.Command#2]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.Command#2]
+DEBUG http-8080-2 org.hibernate.loader.Loader - done entity load
+DEBUG http-8080-2 org.hibernate.loader.Loader - loading entity: [com.saic.tmr.domain.ProcurementType#83]
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+DEBUG http-8080-2 org.hibernate.SQL - select procuremen0_.id as id12_0_, procuremen0_.code as code12_0_, procuremen0_.name as name12_0_, procuremen0_.version as version12_0_ from procurement_type procuremen0_ where procuremen0_.id=?
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.loader.Loader - result row: EntityKey[com.saic.tmr.domain.ProcurementType#83]
+DEBUG http-8080-2 org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.saic.tmr.domain.ProcurementType': PersistenceElement for transient javax.persistence.EntityManager com.saic.tmr.domain.ProcurementType.entityManager
+DEBUG http-8080-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.ProcurementType#83]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.ProcurementType#83]
+DEBUG http-8080-2 org.hibernate.loader.Loader - done entity load
+DEBUG http-8080-2 org.hibernate.loader.Loader - loading entity: [com.saic.tmr.domain.PursuitStatus#91]
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+DEBUG http-8080-2 org.hibernate.SQL - select pursuitsta0_.id as id8_0_, pursuitsta0_.code as code8_0_, pursuitsta0_.name as name8_0_, pursuitsta0_.version as version8_0_ from pursuit_status pursuitsta0_ where pursuitsta0_.id=?
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.loader.Loader - result row: EntityKey[com.saic.tmr.domain.PursuitStatus#91]
+DEBUG http-8080-2 org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.saic.tmr.domain.PursuitStatus': PersistenceElement for transient javax.persistence.EntityManager com.saic.tmr.domain.PursuitStatus.entityManager
+DEBUG http-8080-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.PursuitStatus#91]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.PursuitStatus#91]
+DEBUG http-8080-2 org.hibernate.loader.Loader - done entity load
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46889]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46890]
+DEBUG http-8080-2 org.hibernate.loader.Loader - loading entity: [com.saic.tmr.domain.ProcurementType#82]
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+DEBUG http-8080-2 org.hibernate.SQL - select procuremen0_.id as id12_0_, procuremen0_.code as code12_0_, procuremen0_.name as name12_0_, procuremen0_.version as version12_0_ from procurement_type procuremen0_ where procuremen0_.id=?
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.loader.Loader - result row: EntityKey[com.saic.tmr.domain.ProcurementType#82]
+DEBUG http-8080-2 org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.saic.tmr.domain.ProcurementType': PersistenceElement for transient javax.persistence.EntityManager com.saic.tmr.domain.ProcurementType.entityManager
+DEBUG http-8080-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.ProcurementType#82]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.ProcurementType#82]
+DEBUG http-8080-2 org.hibernate.loader.Loader - done entity load
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46890]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46891]
+DEBUG http-8080-2 org.hibernate.loader.Loader - loading entity: [com.saic.tmr.domain.Command#3]
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+DEBUG http-8080-2 org.hibernate.SQL - select command0_.id as id10_0_, command0_.name as name10_0_, command0_.version as version10_0_ from command command0_ where command0_.id=?
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.loader.Loader - result row: EntityKey[com.saic.tmr.domain.Command#3]
+DEBUG http-8080-2 org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.saic.tmr.domain.Command': PersistenceElement for transient javax.persistence.EntityManager com.saic.tmr.domain.Command.entityManager
+DEBUG http-8080-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.Command#3]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.Command#3]
+DEBUG http-8080-2 org.hibernate.loader.Loader - done entity load
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46891]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46892]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46892]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46893]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46893]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46894]
+DEBUG http-8080-2 org.hibernate.loader.Loader - loading entity: [com.saic.tmr.domain.Command#4]
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+DEBUG http-8080-2 org.hibernate.SQL - select command0_.id as id10_0_, command0_.name as name10_0_, command0_.version as version10_0_ from command command0_ where command0_.id=?
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.loader.Loader - result row: EntityKey[com.saic.tmr.domain.Command#4]
+DEBUG http-8080-2 org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.saic.tmr.domain.Command': PersistenceElement for transient javax.persistence.EntityManager com.saic.tmr.domain.Command.entityManager
+DEBUG http-8080-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.Command#4]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.Command#4]
+DEBUG http-8080-2 org.hibernate.loader.Loader - done entity load
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46894]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46895]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46895]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46896]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46896]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46897]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46897]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.RFP#46898]
+DEBUG http-8080-2 org.hibernate.loader.Loader - loading entity: [com.saic.tmr.domain.PursuitStatus#89]
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+DEBUG http-8080-2 org.hibernate.SQL - select pursuitsta0_.id as id8_0_, pursuitsta0_.code as code8_0_, pursuitsta0_.name as name8_0_, pursuitsta0_.version as version8_0_ from pursuit_status pursuitsta0_ where pursuitsta0_.id=?
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.loader.Loader - result row: EntityKey[com.saic.tmr.domain.PursuitStatus#89]
+DEBUG http-8080-2 org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.saic.tmr.domain.PursuitStatus': PersistenceElement for transient javax.persistence.EntityManager com.saic.tmr.domain.PursuitStatus.entityManager
+DEBUG http-8080-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - resolving associations for [com.saic.tmr.domain.PursuitStatus#89]
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.PursuitStatus#89]
+DEBUG http-8080-2 org.hibernate.loader.Loader - done entity load
+DEBUG http-8080-2 org.hibernate.engine.TwoPhaseLoad - done materializing entity [com.saic.tmr.domain.RFP#46898]
+DEBUG http-8080-2 org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.saic.tmr.domain.RFP': PersistenceElement for transient javax.persistence.EntityManager com.saic.tmr.domain.RFP.entityManager
+DEBUG http-8080-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+DEBUG http-8080-2 org.hibernate.SQL - select count(rfp0_.id) as col_0_0_ from rfp rfp0_ limit ?
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG http-8080-2 org.hibernate.loader.Loader - result row: 
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG http-8080-2 org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+DEBUG http-8080-2 org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+DEBUG http-8080-2 org.springframework.web.servlet.DispatcherServlet - Rendering view [org.springframework.web.servlet.view.tiles2.TilesView: name 'rfps/list'; URL [rfps/list]] in DispatcherServlet with name 'tmr'
+DEBUG http-8080-2 org.springframework.web.servlet.view.tiles2.TilesView - Added model object 'RFP__submittaldate_date_format' of type [java.lang.String] to request in view with name 'rfps/list'
+DEBUG http-8080-2 org.springframework.web.servlet.view.tiles2.TilesView - Added model object 'RFP__advancenoticeenddate_date_format' of type [java.lang.String] to request in view with name 'rfps/list'
+DEBUG http-8080-2 org.springframework.web.servlet.view.tiles2.TilesView - Added model object 'RFP__rfpissuedate_date_format' of type [java.lang.String] to request in view with name 'rfps/list'
+DEBUG http-8080-2 org.springframework.web.servlet.view.tiles2.TilesView - Added model object 'maxPages' of type [java.lang.Integer] to request in view with name 'rfps/list'
+DEBUG http-8080-2 org.springframework.web.servlet.view.tiles2.TilesView - Added model object 'rfps' of type [java.util.ArrayList] to request in view with name 'rfps/list'
+DEBUG http-8080-2 org.apache.tiles.impl.BasicTilesContainer - Render request recieved for definition 'rfps/list'
+DEBUG http-8080-2 org.springframework.web.servlet.DispatcherServlet - Successfully completed request
+DEBUG http-8080-2 org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter - Closing JPA EntityManager in OpenEntityManagerInViewFilter
+DEBUG http-8080-2 org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+DEBUG http-8080-2 org.springframework.security.web.access.ExceptionTranslationFilter - Chain processed normally
+DEBUG http-8080-2 org.springframework.security.web.context.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+INFO Thread-2 org.springframework.web.context.support.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'tmr-servlet': startup date [Mon Nov 05 12:08:09 EST 2012]; parent: Root WebApplicationContext
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+INFO Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6b372a37: defining beans [companyController,procurementTypeController,pursuitController,newBusinessController,RFPController,personController,pursuitStatusController,contractTypeController,awardController,commandController,opCenterController,documentController,pursuitRoleController,businessUnitController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.validation.beanvalidation.LocalValidatorFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#1,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.web.servlet.handler.MappedInterceptor#2,org.springframework.web.servlet.config.viewControllerHandlerMapping,messageSource,localeResolver,themeSource,themeResolver,org.springframework.web.servlet.handler.SimpleMappingExceptionResolver#0,multipartResolver,tilesViewResolver,tilesConfigurer,applicationConversionService,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@2193d0c6
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'tilesConfigurer'
+INFO Thread-2 org.apache.tiles.access.TilesAccess - Removing TilesContext for context: org.springframework.web.servlet.view.tiles2.SpringTilesApplicationContextFactory$SpringWildcardServletTilesApplicationContext
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#14': [org.springframework.web.servlet.config.viewControllerHandlerMapping]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#8': [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#1': [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'org.springframework.web.servlet.i18n.LocaleChangeInterceptor#0': [org.springframework.web.servlet.handler.MappedInterceptor#2]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'org.springframework.web.servlet.theme.ThemeChangeInterceptor#0': [org.springframework.web.servlet.handler.MappedInterceptor#1]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)': [org.springframework.web.servlet.handler.MappedInterceptor#0]
+INFO Thread-2 org.springframework.web.context.support.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Nov 05 12:08:05 EST 2012]; root of context hierarchy
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+INFO Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2193d0c6: defining beans [org.springframework.security.filterChains,org.springframework.security.filterChainProxy,org.springframework.security.web.PortMapperImpl#0,org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0,org.springframework.security.authentication.ProviderManager#0,org.springframework.security.web.context.HttpSessionSecurityContextRepository#0,org.springframework.security.web.authentication.session.SessionFixationProtectionStrategy#0,org.springframework.security.web.savedrequest.HttpSessionRequestCache#0,org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler#0,org.springframework.security.access.vote.AffirmativeBased#0,org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0,org.springframework.security.web.access.DefaultWebInvocationPrivilegeEvaluator#0,org.springframework.security.authentication.AnonymousAuthenticationProvider#0,org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint#0,org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0,org.springframework.security.userDetailsServiceFactory,org.springframework.security.web.DefaultSecurityFilterChain#0,org.springframework.security.provisioning.InMemoryUserDetailsManager#0,org.springframework.security.authentication.dao.DaoAuthenticationProvider#0,org.springframework.security.authentication.DefaultAuthenticationEventPublisher#0,org.springframework.security.authenticationManager,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,org.springframework.context.config.internalBeanConfigurerAspect,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,transactionManager,org.springframework.transaction.config.internalTransactionAspect,entityManagerFactory,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'entityManagerFactory': [com.saic.tmr.domain.RFP, com.saic.tmr.domain.Command, com.saic.tmr.domain.ProcurementType, com.saic.tmr.domain.PursuitStatus, com.saic.tmr.domain.Pursuit, com.saic.tmr.domain.BusinessUnit, com.saic.tmr.domain.NewBusiness, com.saic.tmr.domain.OpCenter, com.saic.tmr.domain.Company, com.saic.tmr.domain.PursuitRole, com.saic.tmr.domain.Person, com.saic.tmr.domain.Award]
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'entityManagerFactory'
+INFO Thread-2 org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'persistenceUnit'
+INFO Thread-2 org.hibernate.impl.SessionFactoryImpl - closing
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy method 'close' on bean with name 'dataSource'
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'org.springframework.context.config.internalBeanConfigurerAspect'
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'org.springframework.security.filterChainProxy'
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#29': [org.springframework.security.filterChainProxy]
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'org.springframework.security.filterChains'
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)': [org.springframework.security.web.DefaultSecurityFilterChain#0]
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name '(inner bean)#1'
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#2': [(inner bean)#2]
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name '(inner bean)#2'
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name '(inner bean)#9'
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name '(inner bean)#10'
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name '(inner bean)#11'
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name '(inner bean)#12'
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#13': [(inner bean)#13]
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name '(inner bean)#13'
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#14': [(inner bean)#14]
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name '(inner bean)#14'
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#17': [(inner bean)#17, org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#16': [org.springframework.security.access.vote.AffirmativeBased#0]
+DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0'
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#3': [org.springframework.security.web.savedrequest.HttpSessionRequestCache#0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'org.springframework.security.web.savedrequest.HttpSessionRequestCache#0': [(inner bean)#3]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#8': [org.springframework.security.authentication.ProviderManager#0]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#5': [org.springframework.security.authentication.dao.DaoAuthenticationProvider#0]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#6': [(inner bean)#6, org.springframework.security.provisioning.InMemoryUserDetailsManager#0]
+DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#7': [(inner bean)#7]

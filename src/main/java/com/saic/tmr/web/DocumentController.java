@@ -59,14 +59,14 @@ public class DocumentController {
     public String createdoc(@Valid Document document, BindingResult result, Model model, @RequestParam("content") MultipartFile content, HttpServletRequest request) {
         document.setContentType(content.getContentType());
         document.setFilename(content.getOriginalFilename());
-        log.error("Filename is: " + content.getOriginalFilename());
-        log.error("ContentType is: " + content.getContentType());
+        log.debug("Filename is: " + content.getOriginalFilename());
+        log.debug("ContentType is: " + content.getContentType());
         document.setFilesize(content.getSize());
         if (result.hasErrors()) {
             List<ObjectError> errors = result.getAllErrors();
             for (int i = 0; i < errors.size(); i++) {
                 ObjectError error = errors.get(i);
-                log.error("Error " + i + " : " + error.toString());
+                log.debug("Error " + i + " : " + error.toString());
             }
             model.addAttribute("document", document);
             return "documents/create";
@@ -76,7 +76,7 @@ public class DocumentController {
         try {
             fileSystem = new POIFSFileSystem(new ByteArrayInputStream(content.getBytes()));
         } catch (Exception e) {
-            log.error("The file uploaded is not an excel file");
+            log.debug("The file uploaded is not an excel file");
             return null;
         }
         HSSFWorkbook workBook = null;
@@ -91,7 +91,7 @@ public class DocumentController {
         rows.next();
         while (rows.hasNext()) {
             HSSFRow row = rows.next();
-            log.error("Row No.: " + row.getRowNum());
+            log.info("Row No.: " + row.getRowNum());
             Iterator<HSSFCell> cells = row.cellIterator();
             RFP rfp = new RFP();
             Pursuit pursuit = new Pursuit();
@@ -258,7 +258,7 @@ public class DocumentController {
             
             HSSFCell cellR = cells.next();
             if (cellR.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-            	double value = cellQ.getNumericCellValue();
+            	double value = cellR.getNumericCellValue();
 				if(HSSFDateUtil.isValidExcelDate(value))
 				{
 					Date date = HSSFDateUtil.getJavaDate(value);
@@ -267,12 +267,12 @@ public class DocumentController {
 				else
 				{
 					log.error("Invalid Date value found at row number " +
-							row.getRowNum()+" and column number "+cellQ.getCellNum());	
+							row.getRowNum()+" and column number "+cellR.getCellNum());	
 				}
             }
             HSSFCell cellS = cells.next();
             if (cellS.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
-            	double value = cellQ.getNumericCellValue();
+            	double value = cellS.getNumericCellValue();
 				if(HSSFDateUtil.isValidExcelDate(value))
 				{
 					Date date = HSSFDateUtil.getJavaDate(value);
@@ -281,7 +281,7 @@ public class DocumentController {
 				else
 				{
 					log.error("Invalid Date value found at row number " +
-							row.getRowNum()+" and column number "+cellQ.getCellNum());	
+							row.getRowNum()+" and column number "+cellS.getCellNum());	
 				}
             }
             HSSFCell cellT = cells.next();
@@ -323,32 +323,38 @@ public class DocumentController {
             HSSFCell cellU = cells.next();
             if (cellU.getCellType() == HSSFCell.CELL_TYPE_STRING) {
                 String comment = cellU.getRichStringCellValue().toString().trim();
-                if (comment.substring(0, 3).equalsIgnoreCase("cpoc")) {
-                    String fullName = comment.substring(4).trim();
+                if (comment.substring(0, 4).equalsIgnoreCase("cpoc")) {
+                	log.debug("cpoc");
+                    String fullName = comment.substring(5).trim();
                     String first = "";
                     String last = "";
                     List<Person> results = null;
                     if (fullName.contains(",")) {
+                    	log.debug("contains ,");
                         String[] names = fullName.split(",");
                         last = names[0].trim();
                         first = names[1].trim();
                         results = Person.findPeopleByLastNameLikeAndFirstNameLike(last, first).getResultList();
                     } else {
+                    	log.debug("no comma");
                         last = fullName;
                         results = Person.findPeopleByLastNameLike(last).getResultList();
                     }
                     if (results.size() == 0) {
+                    	log.debug("no person's found adding");
                         Person person = new Person();
                         person.setFirstName(first);
                         person.setLastName(last);
                         person.persist();
                         pursuit.setContractsRep(person);
                     } else if (results.size() == 1) {
+                    	log.debug("person found adding");
                         pursuit.setContractsRep((Person) results.get(0));
                     } else {
                         log.error("Database error");
                     }
                 } else {
+                	log.debug("setting comments no cpoc");
                     rfp.setComments(cellU.getRichStringCellValue().toString().trim());
                 }
             }
@@ -364,7 +370,7 @@ public class DocumentController {
 	                } else if (results.size() == 1) {
 	                    award.setWinner((Company) results.get(0));
 	                } else {
-	                    log.error("Database error");
+	                    log.debug("Database debug");
 	                }
 	            }
             }
@@ -388,14 +394,14 @@ public class DocumentController {
             	// Get existing rfp record
             	List<RFP> results = RFP.findRFPSByTargetNumber(targetNumber).getResultList();
             	if (results.size() == 0) {
-            		log.error("Should have been a RFP record for: "+ targetNumber);
+            		log.debug("Should have been a RFP record for: "+ targetNumber);
             	}
             	else if (results.size() == 1){
             		RFP prevRFP = (RFP) results.get(0);
             		rfp = prevRFP;
             	}
             	else {
-            		log.error("Too many records returned for: " +targetNumber);
+            		log.debug("Too many records returned for: " +targetNumber);
             	}
             }
             if(!cellV.getRichStringCellValue().toString().trim().equals("")) { //Winner is not empty
